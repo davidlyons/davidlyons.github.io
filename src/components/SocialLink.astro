@@ -1,0 +1,16 @@
+---
+// https://www.astroicon.dev/
+import { Icon } from 'astro-icon/components';
+
+const { class: className, label, icon, rel = 'noreferrer', ...props } = Astro.props;
+---
+
+<a
+  target="_blank"
+  rel={rel}
+  class:list={['d-inline-block px-2', className]}
+  aria-label={label}
+  {...props}
+>
+  <Icon name={`social/${icon}`} size={18} />
+</a>

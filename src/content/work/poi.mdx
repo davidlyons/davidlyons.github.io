@@ -1,0 +1,29 @@
+---
+title: Poi Patterns
+pubDate: 2021-12-30 00:00:00 PST
+img: /work/poi.jpg
+img_alt: Split time same direction antispin flower
+description:
+  Poi / glowstick flower pattern visualizer to explore how string length affects the flower shape,
+  the relative timing and direction of two sticks moving through the flower shapes, and the number
+  of object rotations per hand rotation to create different numbers of in-spin and anti-spin petals.
+tags:
+  - Three.js
+  - React
+  - Material UI
+  - SCSS
+  - Vite
+---
+
+<Iframe src="https://flowarts.xyz" ratio="4x3" />
+
+For each stick, a rectangle is extruded along a curve created with a parametric equation:
+
+```js
+x = cos(time * handTurns) * armLength + cos(time * poiTurns) * poiLength * (startOut ? 1 : -1);
+y = sin(time * handTurns) * armLength + sin(time * poiTurns) * poiLength * (startOut ? 1 : -1);
+```
+
+Where `time` is the angle in radians between `0` and `2π`
+
+<YouTube id="zQPcupoacjM" />

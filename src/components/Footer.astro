@@ -1,0 +1,41 @@
+---
+import { Icon } from 'astro-icon/components';
+import SocialLink from './SocialLink.astro';
+---
+
+<footer class="py-4 text-center">
+  <div class="container d-sm-flex justify-content-sm-between align-items-center">
+    <div class="small">
+      <a href="mailto:david@davidlyons.dev" class="d-inline-flex align-items-center">
+        <Icon name="envelope" size={16} class="me-2" />
+        david@davidlyons.dev
+      </a>
+    </div>
+    <div class="mt-2 mb-3 my-sm-0 order-sm-3">
+      <SocialLink
+        href="https://www.linkedin.com/in/davidxlyons"
+        label="LinkedIn"
+        icon="linkedin"
+      /><SocialLink
+        href="https://twitter.com/davidxlyons"
+        label="X / Twitter"
+        icon="twitter-x"
+      /><SocialLink href="https://github.com/davidlyons" label="GitHub" icon="github" /><SocialLink
+        href="https://codepen.io/davidlyons"
+        label="Codepen"
+        icon="codepen"
+      /><SocialLink
+        href="https://sketchfab.com/davidlyons"
+        label="Sketchfab"
+        icon="sketchfab"
+      /><SocialLink
+        href="/rss.xml"
+        label="RSS Feed"
+        icon="rss"
+        rel="alternate"
+        type="application/rss+xml"
+      />
+    </div>
+    <div class="small">&copy; {new Date().getFullYear()} David Lyons</div>
+  </div>
+</footer>

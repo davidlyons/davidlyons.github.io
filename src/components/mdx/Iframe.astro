@@ -1,0 +1,27 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = {
+  ratio: '1x1' | '4x3' | '16x9' | '21x9';
+} & HTMLAttributes<'iframe'>;
+
+const { src, ratio = '16x9', title, ...props } = Astro.props;
+---
+
+<div class={`ratio ratio-${ratio} mb-4`}>
+  <iframe
+    src={src}
+    title={title}
+    allow="accelerometer; autoplay; clipboard-write; fullscreen; encrypted-media; gyroscope; picture-in-picture; web-share"
+    class="rounded-3"
+    {...props}
+  >
+  </iframe>
+</div>
+
+<p class="mb-5">
+  <a href={src} target="_blank" class="icon-link" aria-label="Open project in new window">
+    Open <Icon name="box-arrow-up-right" size={16} />
+  </a>
+</p>

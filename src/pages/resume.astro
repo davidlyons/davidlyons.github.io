@@ -1,0 +1,167 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<BaseLayout title="Resume">
+  <div class="d-flex align-items-center mb-5">
+    <h1 class="h2 mb-0">Resume</h1>
+    <div class="ms-3">
+      <a
+        class="btn btn-outline-secondary btn-sm"
+        href="/David-Lyons-Resume.pdf"
+        title="Download David-Lyons-Resume.pdf"
+        download
+      >
+        <Icon name="download" class="me-1" />
+        Download PDF
+      </a>
+    </div>
+  </div>
+
+  <div class="resume">
+    <div class="row mb-5">
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <div class="row">
+          <div class="col-6">
+            <h3 class="mb-3">Languages</h3>
+            <ul class="list-unstyled">
+              <li><Icon name="devicon:javascript" />JavaScript, ES6+</li>
+              <li><Icon name="devicon:html5" />HTML</li>
+              <li><Icon name="devicon:css3" />CSS</li>
+              <li><Icon name="skill-icons:sass" />SCSS</li>
+              <li><Icon name="skill-icons:typescript" />TypeScript</li>
+              <li><Icon name="file-icons:terminal" />Command Line</li>
+            </ul>
+
+            <h3 class="mb-3">Skills</h3>
+            <ul class="list-unstyled">
+              <li>Responsive Web Design</li>
+              <li>Photo Editing</li>
+              <li>Video Editing</li>
+              <li>Graphic Design</li>
+              <li>Interaction Design</li>
+              <li>Vector Math</li>
+              <li>3D Modeling</li>
+              <li>Digital Sculpting</li>
+              <li>Retopology</li>
+              <li>UV Layout</li>
+              <li>3D Printing</li>
+            </ul>
+
+            <h3 class="mb-3">Currently Learning</h3>
+            <ul class="list-unstyled">
+              <li><Icon name="devicon:react" /><Icon name="tags/threejs" />React Three Fiber</li>
+              <li><Icon name="file-icons:webgl" size={24} />GLSL Shaders</li>
+              <li><Icon name="tags/blender" />Blender</li>
+              <li><Icon name="devicon:tailwindcss" />Tailwind</li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <h3 class="mb-3">Tools</h3>
+            <ul class="list-unstyled">
+              <li><Icon name="tags/threejs" />Three.js</li>
+              <li><Icon name="skill-icons:bootstrap" />Bootstrap</li>
+              <li><Icon name="devicon:react" />React</li>
+              <li><Icon name="devicon:vscode" />Visual Studio Code</li>
+              <li><Icon name="devicon:chrome" />Chrome DevTools</li>
+              <li><Icon name="tags/npm" />npm</li>
+              <li><Icon name="devicon:git" />Git</li>
+              <li><Icon name="devicon:nextjs" />Next.js</li>
+              <li><Icon name="tags/astro" />Astro</li>
+              <li><Icon name="skill-icons:gatsby" />Gatsby</li>
+              <li><Icon name="tags/storybook" />Storybook</li>
+              <li><Icon name="skill-icons:webpack-dark" />Webpack</li>
+              <li><Icon name="devicon:vitejs" />Vite</li>
+              <li><Icon name="skill-icons:photoshop" />Photoshop</li>
+              <li><Icon name="skill-icons:illustrator" />Illustrator</li>
+              <li><Icon name="skill-icons:premiere" />Premiere</li>
+              <li><Icon name="devicon:maya" />Maya</li>
+              <li><Icon name="file-icons:zbrush" />ZBrush</li>
+              <li><Icon name="tags/resolume" />Resolume</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7 offset-lg-1">
+        <h3 class="mb-3">Work Experience</h3>
+
+        <div class="mb-3">
+          <div class="fw-medium">BP</div>
+          <div>Senior Design Engineer</div>
+          <div class="fw-light small opacity-50">
+            <div>May 2020 - Present • Los Angeles, CA</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="fw-medium">Object Edge <span class="opacity-50">• Contract</span></div>
+          <div>Front End Web + 3D Web Developer</div>
+          <div class="fw-light small opacity-50">Feb 2019 - Jan 2020 • Los Angeles, CA</div>
+        </div>
+
+        <div class="mb-3">
+          <div class="fw-medium">WITHIN</div>
+          <div>WebVR Software Engineer</div>
+          <div class="fw-light small opacity-50">Nov 2015 - Aug 2018 • Los Angeles, CA</div>
+        </div>
+
+        <div class="mb-3">
+          <div class="fw-medium">Slingshot</div>
+          <div>Front End Web Developer</div>
+          <div class="fw-light small opacity-50">Mar 2013 - Nov 2015 • Dallas, TX</div>
+        </div>
+
+        <div class="mb-5">
+          <div class="fw-medium">TRG / The Richards Group / Click Here Labs</div>
+          <div>Front End Web Developer</div>
+          <div class="fw-light small opacity-50">Mar 2012 - Mar 2013 • Dallas, TX</div>
+        </div>
+
+        <h3 class="mb-3">Education</h3>
+
+        <div class="mb-3">
+          <div class="fw-medium">Texas A&M University</div>
+          <div>Bachelor of Science in Visualization, December 2010</div>
+          <div class="fw-light small opacity-50">Fall 2007 - Fall 2010 • College Station, TX</div>
+        </div>
+
+        <div>
+          <div class="fw-medium">The University of Texas at Dallas</div>
+          <div class="fw-light small opacity-50">
+            Spring 2010 semester away in the Arts and Technology department
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style lang="scss">
+  // prettier-ignore
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 300;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: 1.6px;
+  }
+
+  .list-unstyled {
+    margin-bottom: 35px;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-right: 8px;
+      }
+    }
+  }
+</style>

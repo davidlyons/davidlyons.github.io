@@ -1,0 +1,57 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+type Props = {
+  project: CollectionEntry<'work'>;
+};
+
+const { data, slug } = Astro.props.project;
+---
+
+<a class="grid-item rounded-3 overflow-hidden position-relative" href={`/work/${slug}`}>
+  <div class="ratio ratio-1x1">
+    <img
+      src={data.img}
+      alt={data.img_alt || ''}
+      loading="lazy"
+      decoding="async"
+      class="w-100 h-100 object-fit-cover"
+    />
+  </div>
+  <div class="grid-item-overlay">{data.title}</div>
+</a>
+
+<style lang="scss">
+  .grid-item-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 10px 15px;
+    pointer-events: none;
+
+    color: #fff;
+    background-image: linear-gradient(180deg, rgba(#000, 0) 60%, rgba(#000, 0.6));
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+  }
+
+  .grid-item {
+    transition: box-shadow 200ms ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+
+      .grid-item-overlay {
+        opacity: 1;
+      }
+    }
+  }
+</style>

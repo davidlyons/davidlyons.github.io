@@ -1,0 +1,52 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import FormattedDate from '@/components/FormattedDate.astro';
+import { components } from '@/components/mdx/index.astro';
+import { iconMap } from '@/consts';
+import { Icon } from 'astro-icon/components';
+
+// This is a dynamic route that generates a page for every Markdown file in src/content/
+// Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
+// https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
+export async function getStaticPaths() {
+  const work = await getCollection('work');
+  return work.map((entry) => ({
+    params: { slug: entry.slug },
+    props: entry,
+  }));
+}
+
+type Props = CollectionEntry<'work'>;
+
+const entry = Astro.props;
+const { title, description, pubDate, img, img_alt, tags } = entry.data;
+const { Content } = await entry.render();
+---
+
+<BaseLayout {...entry.data}>
+  <div class="row">
+    <div class="col-lg-3">
+      <h1 class="mb-1">{title}</h1>
+      <p class="opacity-50">
+        <FormattedDate date={pubDate} />
+      </p>
+      {description && <p class="mb-5">{description}</p>}
+      <div class="h5">Tools used:</div>
+      <ul class="list-unstyled">
+        {
+          tags.map((tag) => (
+            <li>
+              <span class="badge text-bg-secondary">
+                {iconMap[tag] && <Icon name={iconMap[tag]} size={16} class="me-1" />} {tag}
+              </span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="col-lg-8 offset-lg-1">
+      <Content components={components} />
+    </div>
+  </div>
+</BaseLayout>

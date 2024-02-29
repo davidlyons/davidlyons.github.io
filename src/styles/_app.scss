@@ -1,0 +1,33 @@
+html {
+  overflow-y: scroll;
+}
+
+body {
+  letter-spacing: 0.2px;
+}
+
+.site-title {
+  line-height: 1.2;
+}
+
+.navbar-brand {
+  font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
+}
+
+footer {
+  color: rgba(var(--bs-body-color-rgb), 0.3);
+
+  a {
+    color: rgba(var(--bs-body-color-rgb), 0.3);
+    transition: color 200ms ease-in-out;
+
+    &:hover {
+      color: rgba(var(--bs-body-color-rgb), 0.8);
+    }
+  }
+}
+
+strong {
+  font-weight: 500;
+}

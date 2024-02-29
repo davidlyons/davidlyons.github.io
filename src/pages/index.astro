@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PortfolioPreview from '@/components/PortfolioPreview.astro';
+
+const projects = (await getCollection('work')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<BaseLayout title="3D Artist / Front End Web Dev">
+  <div class="grid">
+    {projects.map((project) => <PortfolioPreview project={project} />)}
+  </div>
+</BaseLayout>
+
+<style lang="scss">
+  @import '/node_modules/bootstrap/scss/functions';
+  @import '/node_modules/bootstrap/scss/variables';
+  @import '/node_modules/bootstrap/scss/mixins/breakpoints';
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+</style>

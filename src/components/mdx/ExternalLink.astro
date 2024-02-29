@@ -1,0 +1,20 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = HTMLAttributes<'a'>;
+
+const { href, ...props } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noreferrer"
+  aria-label="Open project in new window"
+  class="d-inline-block text-truncate w-100"
+  {...props}
+>
+  <Icon name="link" class="flex-shrink-0 me-1" size={20} aria-hidden="true" />
+  <span>{href}</span>
+</a>

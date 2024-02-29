@@ -1,0 +1,11 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = HTMLAttributes<'table'>;
+
+const props = Astro.props;
+---
+
+<table class="table table-bordered" {...props}>
+  <slot />
+</table>
