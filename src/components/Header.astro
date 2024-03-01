@@ -5,12 +5,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
 
 <header>
   <nav class="navbar navbar-expand bg-body-secondary">
-    <div class="container">
-      <div class="site-title me-4">
+    <div class="container flex-column flex-sm-row">
+      <div class="site-title me-sm-4 mb-3 mb-sm-0">
         <a class="navbar-brand me-0" href="/">{SITE_TITLE}</a>
         <div class="opacity-50 small">{SITE_DESCRIPTION}</div>
       </div>
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav ms-sm-auto mb-lg-0">
         <HeaderLink href="/">Work</HeaderLink>
         <HeaderLink href="/about">About</HeaderLink>
         <HeaderLink href="/resume">Resume</HeaderLink>
