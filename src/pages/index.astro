@@ -2,13 +2,14 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PortfolioPreview from '@/components/PortfolioPreview.astro';
+import { SITE_DESCRIPTION } from '@/consts';
 
 const projects = (await getCollection('work')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
 
-<BaseLayout title="3D Artist / Front End Web Dev">
+<BaseLayout title={SITE_DESCRIPTION}>
   <div class="grid">
     {projects.map((project) => <PortfolioPreview project={project} />)}
   </div>
