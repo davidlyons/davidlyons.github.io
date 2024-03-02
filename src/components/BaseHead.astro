@@ -17,22 +17,22 @@ const { title, description, image = '/site-thumb.png' } = Astro.props;
 const GA_ID = import.meta.env.PUBLIC_GA_ID!;
 ---
 
+<!-- Google tag (gtag.js) -->
 <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
-<script is:inline>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-</script>
 <script is:inline define:vars={{ GA_ID }}>
-  document.addEventListener(
-    'astro:page-load',
-    () => {
-      gtag('js', new Date());
-      gtag('config', GA_ID);
-    },
-    { once: false }
-  );
+  if (document.location.hostname !== 'localhost') {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);} // prettier-ignore
+
+    document.addEventListener(
+      'astro:page-load',
+      () => {
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+      },
+      { once: false }
+    );
+  }
 </script>
 
 <!-- Global Metadata -->
