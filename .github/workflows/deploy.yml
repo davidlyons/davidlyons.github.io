@@ -16,6 +16,8 @@ permissions:
 
 jobs:
   build:
+    env:
+      PUBLIC_GA_ID: ${{ secrets.PUBLIC_GA_ID }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
