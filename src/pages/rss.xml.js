@@ -5,9 +5,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
 // https://docs.astro.build/en/guides/rss/
 
 export async function GET(context) {
-  const posts = await getCollection('work');
+  const posts = (await getCollection('work')).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  );
 
   return rss({
+    stylesheet: '/rss-styles.xsl',
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     site: context.site,
