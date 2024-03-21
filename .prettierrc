@@ -5,6 +5,7 @@
   "useTabs": false,
   "semi": true,
   "singleQuote": true,
+  "jsxSingleQuote": false,
   "arrowParens": "always",
   "bracketSameLine": false,
   "trailingComma": "es5",
