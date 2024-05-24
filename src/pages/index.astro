@@ -10,31 +10,7 @@ const projects = (await getCollection('work')).sort(
 ---
 
 <BaseLayout title={SITE_DESCRIPTION}>
-  <div class="grid">
+  <div class="grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
     {projects.map((project) => <PortfolioPreview project={project} />)}
   </div>
 </BaseLayout>
-
-<style lang="scss">
-  @import '/node_modules/bootstrap/scss/functions';
-  @import '/node_modules/bootstrap/scss/variables';
-  @import '/node_modules/bootstrap/scss/mixins/breakpoints';
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-
-    @include media-breakpoint-up(sm) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    @include media-breakpoint-up(md) {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    @include media-breakpoint-up(lg) {
-      grid-template-columns: repeat(6, 1fr);
-    }
-  }
-</style>
