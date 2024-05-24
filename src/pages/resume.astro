@@ -4,28 +4,28 @@ import { Icon } from 'astro-icon/components';
 ---
 
 <BaseLayout title="Resume">
-  <div class="d-flex align-items-center mb-5">
-    <h1 class="h2 mb-0">Resume</h1>
-    <div class="ms-3">
+  <div class="mb-11 flex items-center">
+    <h1 class="mb-0 text-3xl font-light dark:text-white">Resume</h1>
+    <div class="ms-4">
       <a
-        class="btn btn-outline-secondary btn-sm"
+        class="inline-block rounded border border-current px-2 py-1 text-center text-[13px] transition-colors dark:border-neutral-500 dark:text-neutral-500 dark:hover:bg-neutral-500 dark:hover:text-white"
         href="/David-Lyons-Resume.pdf"
         title="Download David-Lyons-Resume.pdf"
         download
       >
-        <Icon name="download" class="me-1" />
+        <Icon name="download" class="me-1 align-middle" />
         Download PDF
       </a>
     </div>
   </div>
 
   <div class="resume">
-    <div class="row mb-5">
-      <div class="col-lg-4 mb-5 mb-lg-0">
-        <div class="row">
-          <div class="col-6">
+    <div class="mb-5 grid lg:grid-cols-12">
+      <div class="mb-lg-0 mb-5 lg:col-span-4">
+        <div class="grid grid-cols-2">
+          <div>
             <h3 class="mb-3">Languages</h3>
-            <ul class="list-unstyled">
+            <ul class="list-none">
               <li><Icon name="devicon:javascript" />JavaScript, ES6+</li>
               <li><Icon name="devicon:html5" />HTML</li>
               <li><Icon name="devicon:css3" />CSS</li>
@@ -35,7 +35,7 @@ import { Icon } from 'astro-icon/components';
             </ul>
 
             <h3 class="mb-3">Skills</h3>
-            <ul class="list-unstyled">
+            <ul class="list-none">
               <li>Responsive Web Design</li>
               <li>Photo Editing</li>
               <li>Video Editing</li>
@@ -50,18 +50,18 @@ import { Icon } from 'astro-icon/components';
             </ul>
 
             <h3 class="mb-3">Currently Learning</h3>
-            <ul class="list-unstyled">
+            <ul class="list-none">
               <li><Icon name="devicon:react" /><Icon name="tags/threejs" />React Three Fiber</li>
               <li><Icon name="file-icons:webgl" size={24} />GLSL Shaders</li>
               <li><Icon name="tags/blender" />Blender</li>
-              <li><Icon name="devicon:tailwindcss" />Tailwind</li>
             </ul>
           </div>
-          <div class="col-6">
+          <div>
             <h3 class="mb-3">Tools</h3>
-            <ul class="list-unstyled">
+            <ul class="list-none">
               <li><Icon name="tags/threejs" />Three.js</li>
               <li><Icon name="skill-icons:bootstrap" />Bootstrap</li>
+              <li><Icon name="devicon:tailwindcss" />Tailwind</li>
               <li><Icon name="devicon:react" />React</li>
               <li><Icon name="devicon:vscode" />Visual Studio Code</li>
               <li><Icon name="devicon:chrome" />Chrome DevTools</li>
@@ -84,52 +84,79 @@ import { Icon } from 'astro-icon/components';
         </div>
       </div>
 
-      <div class="col-lg-7 offset-lg-1">
-        <h3 class="mb-3">Work Experience</h3>
+      <div class="lg:col-span-7 lg:col-start-6">
+        <h3 class="mb-4">Work Experience</h3>
 
-        <div class="mb-3">
-          <div class="fw-medium"><a href="https://www.bp.com/" target="_blank" rel="noreferrer">BP</a></div>
+        <div class="mb-4">
+          <div class="font-medium">
+            <a href="https://www.bp.com/" target="_blank" rel="noreferrer">BP</a>
+          </div>
           <div>Senior Design Engineer</div>
-          <div class="fw-light small opacity-50">
+          <div class="text-sm font-light opacity-50">
             <div>May 2020 - Present • Los Angeles, CA</div>
           </div>
         </div>
 
-        <div class="mb-3">
-          <div class="fw-medium"><a href="https://www.objectedge.com/" target="_blank" rel="noreferrer">Object Edge</a> <span class="opacity-50">• Contract</span></div>
+        <div class="mb-4">
+          <div class="font-medium">
+            <a href="https://www.objectedge.com/" target="_blank" rel="noreferrer">Object Edge</a>
+            <span class="opacity-50">• Contract</span>
+          </div>
           <div>Front End Web + 3D Web Developer</div>
-          <div class="fw-light small opacity-50">Feb 2019 - Jan 2020 • Los Angeles, CA</div>
+          <div class="text-sm font-light opacity-50">Feb 2019 - Jan 2020 • Los Angeles, CA</div>
         </div>
 
-        <div class="mb-3">
-          <div class="fw-medium"><a href="https://www.with.in/" target="_blank" rel="noreferrer">WITHIN</a></div>
+        <div class="mb-4">
+          <div class="font-medium">
+            <a href="https://www.with.in/" target="_blank" rel="noreferrer">WITHIN</a>
+          </div>
           <div>WebVR Software Engineer</div>
-          <div class="fw-light small opacity-50">Nov 2015 - Aug 2018 • Los Angeles, CA</div>
+          <div class="text-sm font-light opacity-50">Nov 2015 - Aug 2018 • Los Angeles, CA</div>
         </div>
 
-        <div class="mb-3">
-          <div class="fw-medium"><a href="http://www.slingshot.com/" target="_blank" rel="noreferrer">Slingshot</a></div>
+        <div class="mb-4">
+          <div class="font-medium">
+            <a href="http://www.slingshot.com/" target="_blank" rel="noreferrer">Slingshot</a>
+          </div>
           <div>Front End Web Developer</div>
-          <div class="fw-light small opacity-50">Mar 2013 - Nov 2015 • Dallas, TX</div>
+          <div class="text-sm font-light opacity-50">Mar 2013 - Nov 2015 • Dallas, TX</div>
         </div>
 
-        <div class="mb-5">
-          <div class="fw-medium"><a href="https://trg.agency/" target="_blank" rel="noreferrer">TRG</a> / <a href="https://clickherelabs.com/" target="_blank" rel="noreferrer">Click Here Labs</a></div>
+        <div class="mb-12">
+          <div class="font-medium">
+            <a href="https://trg.agency/" target="_blank" rel="noreferrer">TRG</a> / <a
+              href="https://clickherelabs.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Click Here Labs
+            </a>
+          </div>
           <div>Front End Web Developer</div>
-          <div class="fw-light small opacity-50">Mar 2012 - Mar 2013 • Dallas, TX</div>
+          <div class="text-sm font-light opacity-50">Mar 2012 - Mar 2013 • Dallas, TX</div>
         </div>
 
-        <h3 class="mb-3">Education</h3>
+        <h3 class="mb-4">Education</h3>
 
-        <div class="mb-3">
-          <div class="fw-medium">Texas A&M University</div>
-          <div>Bachelor of Science in <a href="https://pvfa.tamu.edu/academics/disciplines/visualization/" target="_blank" rel="noreferrer">Visualization</a>, December 2010</div>
-          <div class="fw-light small opacity-50">Fall 2007 - Fall 2010 • College Station, TX</div>
+        <div class="mb-4">
+          <div class="font-medium">Texas A&M University</div>
+          <div>
+            Bachelor of Science in <a
+              href="https://pvfa.tamu.edu/academics/disciplines/visualization/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visualization
+            </a>, December 2010
+          </div>
+          <div class="text-sm font-light opacity-50">
+            Fall 2007 - Fall 2010 • College Station, TX
+          </div>
         </div>
 
         <div>
-          <div class="fw-medium">The University of Texas at Dallas</div>
-          <div class="fw-light small opacity-50">
+          <div class="font-medium">The University of Texas at Dallas</div>
+          <div class="text-sm font-light opacity-50">
             Spring 2010 semester away in the Arts and Technology department
           </div>
         </div>
@@ -139,20 +166,12 @@ import { Icon } from 'astro-icon/components';
 </BaseLayout>
 
 <style lang="scss">
-  // prettier-ignore
-  h1, h2, h3, h4, h5, h6,
-  .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-weight: 300;
-  }
-
   h3 {
     text-transform: uppercase;
-    font-size: inherit;
-    line-height: inherit;
     letter-spacing: 1.6px;
   }
 
-  .list-unstyled {
+  .list-none {
     margin-bottom: 35px;
 
     li {
@@ -161,6 +180,7 @@ import { Icon } from 'astro-icon/components';
 
       svg {
         margin-right: 8px;
+        flex-shrink: 0;
       }
     }
   }

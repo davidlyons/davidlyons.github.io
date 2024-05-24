@@ -10,14 +10,14 @@ const finalTitle = title ? `${title} | ${SITE_TITLE}` : `${SITE_TITLE}`;
 ---
 
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" class="dark">
   <head>
     <BaseHead title={finalTitle} description={description} image={image} />
   </head>
-  <body>
+  <body class="dark:bg-neutral-900 dark:text-neutral-300">
     <Header />
-    <section class="bg-body-tertiary">
-      <div class="py-5">
+    <section class="bg-neutral-100 dark:bg-neutral-800">
+      <div class="py-12">
         <div class="container">
           <slot />
         </div>

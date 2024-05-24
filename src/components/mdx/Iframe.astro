@@ -3,25 +3,28 @@ import { Icon } from 'astro-icon/components';
 import type { HTMLAttributes } from 'astro/types';
 
 type Props = {
-  ratio: '1x1' | '4x3' | '16x9' | '21x9';
+  aspect: 'square' | 'video' | 'auto' | '4/3';
 } & HTMLAttributes<'iframe'>;
 
-const { src, ratio = '16x9', title, ...props } = Astro.props;
+const { src, aspect = 'video', title, ...props } = Astro.props;
 ---
 
-<div class={`ratio ratio-${ratio} mb-4`}>
-  <iframe
-    src={src}
-    title={title}
-    allow="accelerometer; autoplay; clipboard-write; fullscreen; encrypted-media; gyroscope; picture-in-picture; web-share"
-    class="rounded-3"
-    {...props}
-  >
-  </iframe>
-</div>
+<iframe
+  src={src}
+  title={title}
+  allow="accelerometer; autoplay; clipboard-write; fullscreen; encrypted-media; gyroscope; picture-in-picture; web-share"
+  class={`mb-4 aspect-${aspect} w-full overflow-hidden rounded-lg`}
+  {...props}
+>
+</iframe>
 
-<p class="mb-5">
-  <a href={src} target="_blank" class="icon-link" aria-label="Open project in new window">
+<p class="mb-11">
+  <a
+    href={src}
+    target="_blank"
+    class="inline-flex items-center gap-1.5"
+    aria-label="Open project in new window"
+  >
     Open <Icon name="box-arrow-up-right" size={16} />
   </a>
 </p>

@@ -8,14 +8,14 @@ type Props = {
 const { data, slug } = Astro.props.project;
 ---
 
-<a class="grid-item rounded-3 overflow-hidden position-relative" href={`/work/${slug}`}>
-  <div class="ratio ratio-1x1 bg-body-secondary">
+<a class="grid-item relative overflow-hidden rounded-lg" href={`/work/${slug}`}>
+  <div class="aspect-square">
     <img
       src={data.img}
       alt={data.img_alt || ''}
       loading="lazy"
       decoding="async"
-      class="w-100 h-100 object-fit-cover"
+      class="h-full w-full object-cover"
     />
   </div>
   <div class="grid-item-overlay">{data.title}</div>
