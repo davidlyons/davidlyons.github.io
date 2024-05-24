@@ -9,25 +9,19 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description}>
-  <div class="row">
-    <div class="col-lg-9 mx-auto">
+  <div class="grid-cols-10 gap-4 lg:grid">
+    <div class="col-span-8 col-start-2">
       <div class="hero-image">
         {
           heroImage && (
-            <img
-              class="img-fluid rounded-4 mb-4"
-              width={1020}
-              height={510}
-              src={heroImage}
-              alt=""
-            />
+            <img class="mb-4 w-full rounded-lg" width={1020} height={510} src={heroImage} alt="" />
           )
         }
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-lg-7 mx-auto">
+  <div class="grid-cols-10 gap-4 lg:grid">
+    <div class="col-span-6 col-start-3">
       <div class="text-center">
         <div class="opacity-50">
           <FormattedDate date={pubDate} />
@@ -39,7 +33,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             </div>
           )
         }
-        <h1 class="display-4 fw-medium pb-4 border-bottom mb-5">{title}</h1>
+        <h1 class="mb-8 border-b pb-6 text-4xl font-medium">{title}</h1>
       </div>
       <slot />
     </div>
