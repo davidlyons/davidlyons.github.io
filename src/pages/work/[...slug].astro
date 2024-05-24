@@ -25,19 +25,19 @@ const { Content } = await entry.render();
 ---
 
 <BaseLayout {...entry.data}>
-  <div class="row">
-    <div class="col-lg-3">
-      <h1 class="mb-1">{title}</h1>
+  <div class="grid-cols-12 lg:grid">
+    <div class="lg:col-span-3">
+      <h1 class="mb-1 text-4xl font-medium dark:text-white">{title}</h1>
       <p class="opacity-50">
         <FormattedDate date={pubDate} />
       </p>
-      {description && <p class="mb-5">{description}</p>}
-      <div class="h5">Tools used:</div>
-      <ul class="list-unstyled">
+      {description && <p class="mb-12">{description}</p>}
+      <div class="mb-2 text-lg dark:text-white">Tools used:</div>
+      <ul class="mb-4 list-none">
         {
           tags.map((tag) => (
             <li>
-              <span class="badge text-bg-secondary">
+              <span class="mb-px inline-block rounded-md px-2 py-1 text-xs font-medium dark:bg-gray-500 dark:text-white">
                 {iconMap[tag] && <Icon name={iconMap[tag]} size={16} class="me-1" />} {tag}
               </span>
             </li>
@@ -45,7 +45,7 @@ const { Content } = await entry.render();
         }
       </ul>
     </div>
-    <div class="col-lg-8 offset-lg-1">
+    <div class="lg:col-span-8 lg:col-start-5">
       <Content components={components} />
     </div>
   </div>

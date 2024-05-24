@@ -3,15 +3,18 @@ import { Icon } from 'astro-icon/components';
 import SocialLink from './SocialLink.astro';
 ---
 
-<footer class="py-4 text-center">
-  <div class="container d-sm-flex justify-content-sm-between align-items-center">
-    <div class="small">
-      <a href="mailto:david@davidlyons.dev" class="d-inline-flex align-items-center">
+<footer class="py-6 text-center dark:text-neutral-300/30">
+  <div class="container items-center sm:flex sm:justify-between">
+    <div class="text-sm">
+      <a
+        href="mailto:david@davidlyons.dev"
+        class="inline-flex items-center transition-colors dark:text-neutral-300/30 dark:hover:text-neutral-300/80"
+      >
         <Icon name="envelope" size={16} class="me-2" />
         david@davidlyons.dev
       </a>
     </div>
-    <div class="mt-2 mb-3 my-sm-0 order-sm-3">
+    <div class="mb-3 mt-2 sm:order-3 sm:my-0">
       <SocialLink
         href="https://www.linkedin.com/in/davidxlyons"
         label="LinkedIn"
@@ -36,6 +39,6 @@ import SocialLink from './SocialLink.astro';
         type="application/rss+xml"
       />
     </div>
-    <div class="small">&copy; {new Date().getFullYear()} David Lyons</div>
+    <div class="text-sm">&copy; {new Date().getFullYear()} David Lyons</div>
   </div>
 </footer>

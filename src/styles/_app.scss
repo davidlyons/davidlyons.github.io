@@ -3,31 +3,31 @@ html {
 }
 
 body {
+  font-size: toRem(15px);
+  line-height: 1.7;
   letter-spacing: 0.2px;
 }
 
-.site-title {
-  line-height: 1.2;
+.dark {
+  color-scheme: dark;
 }
 
-.navbar-brand {
-  font-family: 'Rubik', sans-serif;
-  text-transform: uppercase;
-}
+a {
+  color: #1ac6ff;
 
-footer {
-  color: rgba(var(--bs-body-color-rgb), 0.3);
-
-  a {
-    color: rgba(var(--bs-body-color-rgb), 0.3);
-    transition: color 200ms ease-in-out;
-
-    &:hover {
-      color: rgba(var(--bs-body-color-rgb), 0.8);
-    }
+  &:hover {
+    color: #48d1ff;
   }
 }
 
 strong {
   font-weight: 500;
+}
+
+svg {
+  display: inline;
+}
+
+p {
+  margin-bottom: 1rem;
 }
