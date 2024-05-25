@@ -9,33 +9,31 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description}>
-  <div class="grid-cols-10 gap-4 lg:grid">
-    <div class="col-span-8 col-start-2">
-      <div class="hero-image">
-        {
-          heroImage && (
-            <img class="mb-4 w-full rounded-lg" width={1020} height={510} src={heroImage} alt="" />
-          )
-        }
-      </div>
+  <div class="mx-auto max-w-screen-lg">
+    <div class="hero-image">
+      {
+        heroImage && (
+          <img class="mb-4 w-full rounded-lg" width={1020} height={510} src={heroImage} alt="" />
+        )
+      }
     </div>
   </div>
-  <div class="grid-cols-10 gap-4 lg:grid">
-    <div class="col-span-6 col-start-3">
-      <div class="text-center">
-        <div class="opacity-50">
-          <FormattedDate date={pubDate} />
-        </div>
-        {
-          updatedDate && (
-            <div class="last-updated-on">
-              Last updated on <FormattedDate date={updatedDate} />
-            </div>
-          )
-        }
-        <h1 class="mb-8 border-b pb-6 text-4xl font-medium">{title}</h1>
+  <div class="prose dark:prose-invert prose-headings:font-medium prose-th:text-left mx-auto">
+    <div class="text-center">
+      <div class="mb-2 opacity-50">
+        <FormattedDate date={pubDate} />
       </div>
-      <slot />
+      {
+        updatedDate && (
+          <div class="last-updated-on">
+            Last updated on <FormattedDate date={updatedDate} />
+          </div>
+        )
+      }
+      <h1 class="mb-11 border-b border-neutral-700 pb-8 text-5xl font-medium dark:text-white">
+        {title}
+      </h1>
     </div>
+    <slot />
   </div>
 </BaseLayout>

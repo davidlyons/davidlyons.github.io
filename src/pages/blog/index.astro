@@ -9,26 +9,24 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <BaseLayout>
-  <div class="grid-cols-12 lg:grid">
-    <div class="lg:col-span-10 lg:col-start-2 xl:col-span-8 xl:col-start-3">
-      <div class="grid grid-cols-2 gap-5">
-        {
-          posts.map((post, i) => (
-            <div class={i == 0 ? 'col-span-2 mb-5 text-center' : 'col-span-2 mb-5 md:col-span-1'}>
-              <a
-                href={`/blog/${post.slug}/`}
-                class="transition-colors dark:text-white/80 dark:hover:text-white"
-              >
-                <img class="mb-3 rounded-lg" src={post.data.heroImage} alt="" />
-                <h3 class="h2 mb-1">{post.data.title}</h3>
-                <p class="mb-0 opacity-50">
-                  <FormattedDate date={post.data.pubDate} />
-                </p>
-              </a>
-            </div>
-          ))
-        }
-      </div>
+  <div class="mx-auto max-w-screen-md">
+    <div class="grid grid-cols-2 gap-6">
+      {
+        posts.map((post, i) => (
+          <div class={i == 0 ? 'col-span-2 mb-7 text-center' : 'col-span-2 mb-7 md:col-span-1'}>
+            <a
+              href={`/blog/${post.slug}/`}
+              class="transition-colors dark:text-white/80 dark:hover:text-white"
+            >
+              <img class="mb-4 rounded-2xl" src={post.data.heroImage} alt="" />
+              <h3 class="mb-1 text-3xl font-medium">{post.data.title}</h3>
+              <p class="mb-0 opacity-50">
+                <FormattedDate date={post.data.pubDate} />
+              </p>
+            </a>
+          </div>
+        ))
+      }
     </div>
   </div>
 </BaseLayout>
