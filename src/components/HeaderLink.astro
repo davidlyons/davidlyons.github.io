@@ -14,7 +14,7 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
   <a
     href={href}
     class:list={[
-      'block px-4 py-2 opacity-60 transition-opacity hover:opacity-80 dark:text-white dark:hover:text-white',
+      'block px-4 py-2 text-neutral-600 opacity-60 transition-opacity hover:text-neutral-600 hover:opacity-80 dark:text-white dark:hover:text-white',
       className,
       { '!opacity-100': isActive },
     ]}

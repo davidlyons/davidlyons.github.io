@@ -13,6 +13,14 @@ body {
 }
 
 a {
+  color: #1d4ed8;
+
+  &:hover {
+    color: #1e3a8a;
+  }
+}
+
+a:where(.dark, .dark *) {
   color: #1ac6ff;
 
   &:hover {
