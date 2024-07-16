@@ -12,7 +12,12 @@ const config = {
   trailingComma: 'es5',
   htmlWhitespaceSensitivity: 'ignore',
   proseWrap: 'always',
-  plugins: ['prettier-plugin-astro', 'prettier-plugin-tailwindcss'],
+  plugins: [
+    'prettier-plugin-astro',
+    'prettier-plugin-tailwindcss',
+    'prettier-plugin-classnames',
+    'prettier-plugin-merge',
+  ],
 };
 
 export default config;
