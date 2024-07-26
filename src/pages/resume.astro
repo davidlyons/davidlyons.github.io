@@ -1,6 +1,50 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const experience = [
+  {
+    company: 'BP',
+    url: 'https://www.bp.com/',
+    title: 'Senior Design Engineer',
+    start: 'May 2020',
+    end: 'Present',
+    location: 'Los Angeles, CA',
+  },
+  {
+    company: 'Object Edge',
+    contract: true,
+    url: 'https://www.objectedge.com/',
+    title: 'Front End Web + 3D Web Developer',
+    start: 'Feb 2019',
+    end: 'Jan 2020',
+    location: 'Los Angeles, CA',
+  },
+  {
+    company: 'WITHIN',
+    url: 'https://www.with.in/',
+    title: 'WebVR Software Engineer',
+    start: 'Nov 2015',
+    end: 'Aug 2018',
+    location: 'Los Angeles, CA',
+  },
+  {
+    company: 'Slingshot',
+    url: 'http://www.slingshot.com/',
+    title: 'Front End Web Developer',
+    start: 'Mar 2013',
+    end: 'Nov 2015',
+    location: 'Dallas, TX',
+  },
+  {
+    company: 'TRG / Click Here Labs',
+    url: 'https://clickherelabs.com/',
+    title: 'Front End Web Developer',
+    start: 'Mar 2012',
+    end: 'Mar 2013',
+    location: 'Dallas, TX',
+  },
+];
 ---
 
 <BaseLayout title="Resume">
@@ -94,53 +138,21 @@ import { Icon } from 'astro-icon/components';
       <div class="lg:col-span-7 lg:col-start-6">
         <h3 class="mb-4">Work Experience</h3>
 
-        <div class="mb-4">
-          <div class="font-medium">
-            <a href="https://www.bp.com/" target="_blank" rel="noreferrer">BP</a>
-          </div>
-          <div>Senior Design Engineer</div>
-          <div class="text-sm font-light opacity-50">
-            <div>May 2020 - Present • Los Angeles, CA</div>
-          </div>
-        </div>
-
-        <div class="mb-4">
-          <div class="font-medium">
-            <a href="https://www.objectedge.com/" target="_blank" rel="noreferrer">Object Edge</a>
-            <span class="opacity-50">• Contract</span>
-          </div>
-          <div>Front End Web + 3D Web Developer</div>
-          <div class="text-sm font-light opacity-50">Feb 2019 - Jan 2020 • Los Angeles, CA</div>
-        </div>
-
-        <div class="mb-4">
-          <div class="font-medium">
-            <a href="https://www.with.in/" target="_blank" rel="noreferrer">WITHIN</a>
-          </div>
-          <div>WebVR Software Engineer</div>
-          <div class="text-sm font-light opacity-50">Nov 2015 - Aug 2018 • Los Angeles, CA</div>
-        </div>
-
-        <div class="mb-4">
-          <div class="font-medium">
-            <a href="http://www.slingshot.com/" target="_blank" rel="noreferrer">Slingshot</a>
-          </div>
-          <div>Front End Web Developer</div>
-          <div class="text-sm font-light opacity-50">Mar 2013 - Nov 2015 • Dallas, TX</div>
-        </div>
-
-        <div class="mb-12">
-          <div class="font-medium">
-            <a href="https://trg.agency/" target="_blank" rel="noreferrer">TRG</a> / <a
-              href="https://clickherelabs.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Click Here Labs
-            </a>
-          </div>
-          <div>Front End Web Developer</div>
-          <div class="text-sm font-light opacity-50">Mar 2012 - Mar 2013 • Dallas, TX</div>
+        <div class="mb-12 space-y-4">
+          {
+            experience.map(({ company, url, contract, title, start, end, location }) => (
+              <div>
+                <div class="font-medium">
+                  <a href={url} target="_blank" rel="noreferrer">
+                    {company}
+                  </a>
+                  {contract && <span class="opacity-50">• Contract</span>}
+                </div>
+                <div>{title}</div>
+                <div class="text-sm font-light opacity-50">{`${start} - ${end} • ${location}`}</div>
+              </div>
+            ))
+          }
         </div>
 
         <h3 class="mb-4">Education</h3>
