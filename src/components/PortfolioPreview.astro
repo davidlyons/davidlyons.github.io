@@ -8,7 +8,11 @@ type Props = {
 const { data, slug } = Astro.props.project;
 ---
 
-<a class="grid-item relative overflow-hidden rounded-lg" href={`/work/${slug}`}>
+<a
+  class="group relative overflow-hidden rounded-lg transition-shadow hover:shadow-lg hover:outline-none
+    focus-visible:shadow-lg focus-visible:outline-none"
+  href={`/work/${slug}`}
+>
   <div class="aspect-square">
     <img
       src={data.img}
@@ -18,40 +22,11 @@ const { data, slug } = Astro.props.project;
       class="h-full w-full object-cover"
     />
   </div>
-  <div class="grid-item-overlay">{data.title}</div>
+  <div
+    class="pointer-events-none absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-40%
+      px-5 py-3 text-white opacity-0 transition-opacity group-hover:opacity-100
+      group-focus-visible:opacity-100"
+  >
+    {data.title}
+  </div>
 </a>
-
-<style lang="scss">
-  .grid-item-overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    padding: 10px 15px;
-    pointer-events: none;
-
-    color: #fff;
-    background-image: linear-gradient(180deg, rgba(#000, 0) 60%, rgba(#000, 0.6));
-    opacity: 0;
-    transition: opacity 200ms ease-in-out;
-  }
-
-  .grid-item {
-    transition: box-shadow 200ms ease-in-out;
-
-    &:hover,
-    &:focus-visible {
-      outline: none;
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-
-      .grid-item-overlay {
-        opacity: 1;
-      }
-    }
-  }
-</style>
