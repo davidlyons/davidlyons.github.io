@@ -4,7 +4,7 @@ import SocialLink from './SocialLink.astro';
 ---
 
 <footer class="py-6 text-center text-neutral-500 dark:text-neutral-300/30">
-  <div class="container items-center sm:flex sm:justify-between">
+  <div class="container relative items-center sm:flex sm:justify-between">
     <div class="text-sm">
       <a
         href="mailto:david@davidlyons.dev"
@@ -15,7 +15,7 @@ import SocialLink from './SocialLink.astro';
         david@davidlyons.dev
       </a>
     </div>
-    <div class="mb-3 mt-2 sm:order-3 sm:my-0">
+    <div class="mb-4 mt-2 sm:order-3 sm:my-0">
       <SocialLink
         href="https://www.linkedin.com/in/davidxlyons"
         label="LinkedIn"
@@ -40,6 +40,8 @@ import SocialLink from './SocialLink.astro';
         type="application/rss+xml"
       />
     </div>
-    <div class="text-sm">&copy; {new Date().getFullYear()} David Lyons</div>
+    <div class="left-1/2 top-1/2 text-sm sm:absolute sm:-translate-x-1/2 sm:-translate-y-1/2">
+      &copy; {new Date().getFullYear()} David Lyons
+    </div>
   </div>
 </footer>
