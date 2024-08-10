@@ -196,20 +196,17 @@ const experience: experienceType[] = [
 
 <style>
   h3 {
-    text-transform: uppercase;
-    letter-spacing: 1.6px;
+    @apply uppercase;
   }
 
   .list-none {
-    margin-bottom: 35px;
+    @apply mb-9;
 
     li {
-      display: flex;
-      align-items: center;
+      @apply flex items-center;
 
       svg {
-        margin-right: 8px;
-        flex-shrink: 0;
+        @apply me-2 flex-shrink-0;
       }
     }
   }
