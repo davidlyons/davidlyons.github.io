@@ -36,4 +36,7 @@ export default {
   },
   plugins: [],
   darkMode: 'selector',
+  experimental: {
+    optimizeUniversalDefaults: true, // removes unused CSS vars from output
+  },
 };
