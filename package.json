@@ -16,19 +16,19 @@
     "@astrojs/rss": "^4.0.7",
     "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.0",
-    "@iconify-json/devicon": "^1.1.48",
-    "@iconify-json/file-icons": "^1.1.9",
-    "@iconify-json/skill-icons": "^1.1.9",
-    "astro": "^4.13.3",
-    "astro-icon": "^1.1.0",
-    "tailwindcss": "^3.4.7",
+    "@iconify-json/devicon": "^1.1.50",
+    "@iconify-json/file-icons": "^1.1.10",
+    "@iconify-json/skill-icons": "^1.1.10",
+    "astro": "^4.14.2",
+    "astro-icon": "^1.1.1",
+    "tailwindcss": "^3.4.10",
     "typescript": "^5.5.4"
   },
   "devDependencies": {
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-classnames": "^0.7.1",
-    "prettier-plugin-merge": "^0.7.0",
-    "prettier-plugin-tailwindcss": "^0.6.5"
+    "prettier-plugin-classnames": "^0.7.2",
+    "prettier-plugin-merge": "^0.7.1",
+    "prettier-plugin-tailwindcss": "^0.6.6"
   }
 }
