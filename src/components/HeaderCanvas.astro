@@ -1,0 +1,104 @@
+---
+
+---
+
+<div
+  id="canvas-container"
+  class="absolute left-1/2 top-1/2 hidden h-20 w-20 -translate-y-1/2 md:block"
+>
+</div>
+
+<script>
+  // Processed! Bundled! TypeScript-supported!
+  // Importing local scripts and Node modules works.
+
+  import * as THREE from 'three';
+
+  const bgColor = 0x333333;
+  const wireColor = 0x555555;
+
+  let scene: THREE.Scene, camera: THREE.Camera, renderer: THREE.WebGLRenderer;
+
+  scene = new THREE.Scene();
+  scene.background = new THREE.Color(bgColor);
+
+  const header = document.querySelector('header');
+  const container = document.getElementById('canvas-container');
+
+  const width = 80;
+  const height = 80;
+
+  renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(width, height);
+
+  container?.appendChild(renderer.domElement);
+
+  camera = new THREE.PerspectiveCamera(60, width / height, 0.01, 1000);
+  camera.position.set(0, 0, 2.4);
+
+  // -----------------------------------------------------------------
+
+  const group = new THREE.Group();
+
+  const geo = new THREE.IcosahedronGeometry(0.8, 0);
+
+  const wireMat = new THREE.MeshBasicMaterial({
+    color: wireColor,
+    wireframe: true,
+  });
+
+  const solidMat = new THREE.MeshBasicMaterial({
+    color: bgColor,
+  });
+
+  const wireMesh = new THREE.Mesh(geo, wireMat);
+  const solidMesh = new THREE.Mesh(geo, solidMat);
+
+  group.add(wireMesh);
+  group.add(solidMesh);
+
+  scene.add(group);
+
+  // -----------------------------------------------------------------
+
+  var mouse = new THREE.Vector2();
+
+  var groupTarget = new THREE.Euler();
+
+  var xRange = THREE.MathUtils.degToRad(90);
+  var yRange = THREE.MathUtils.degToRad(180);
+
+  header?.addEventListener('mousemove', mousemove, false);
+
+  function mousemove(e: MouseEvent) {
+    // NDC -1 to 1
+    var rect = header!.getBoundingClientRect();
+    mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+    mouse.y = ((e.clientY - rect.top) / rect.height) * -2 + 1;
+
+    groupTarget.y = mouse.x * yRange;
+    groupTarget.x = -mouse.y * xRange;
+  }
+
+  renderer.setAnimationLoop(loop);
+
+  function loop() {
+    if (getComputedStyle(renderer.domElement).display == 'none') return;
+
+    lerp(group.rotation, 'x', groupTarget.x);
+    lerp(group.rotation, 'y', groupTarget.y);
+
+    renderer.render(scene, camera);
+  }
+
+  function lerp(object: { [key: string]: any }, prop: string, destination: number) {
+    if (object && object[prop] !== destination) {
+      object[prop] += (destination - object[prop]) * 0.1;
+
+      if (Math.abs(destination - object[prop]) < 0.001) {
+        object[prop] = destination;
+      }
+    }
+  }
+</script>

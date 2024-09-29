@@ -1,10 +1,11 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import HeaderCanvas from './HeaderCanvas.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
 ---
 
 <header>
-  <nav class="bg-neutral-50 py-5 dark:bg-neutral-750">
+  <nav class="relative bg-neutral-50 py-5 dark:bg-neutral-750">
     <div class="container flex flex-col items-center sm:flex-row">
       <div class="mb-4 leading-[1.2] sm:mb-0 sm:me-4">
         <a
@@ -15,6 +16,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
         </a>
         <div class="text-xs tracking-wide opacity-50">{SITE_DESCRIPTION}</div>
       </div>
+      <HeaderCanvas />
       <ul class="flex sm:ms-auto lg:mb-0">
         <HeaderLink href="/">Work</HeaderLink>
         <HeaderLink href="/about">About</HeaderLink>
