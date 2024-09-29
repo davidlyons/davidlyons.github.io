@@ -4,12 +4,14 @@ import sitemap from '@astrojs/sitemap';
 import icon from 'astro-icon';
 import tailwind from '@astrojs/tailwind';
 
+import react from '@astrojs/react';
+
 // https://icon-sets.iconify.design/
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://davidlyons.dev',
-  integrations: [mdx(), sitemap(), icon(), tailwind({ applyBaseStyles: false })],
+  integrations: [mdx(), sitemap(), icon(), tailwind({ applyBaseStyles: false }), react()],
   compressHTML: false,
   markdown: {
     shikiConfig: {
