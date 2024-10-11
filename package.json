@@ -11,19 +11,19 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.3",
+    "@astrojs/check": "^0.9.4",
     "@astrojs/mdx": "^3.1.7",
     "@astrojs/rss": "^4.0.7",
-    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/sitemap": "^3.2.0",
     "@astrojs/tailwind": "^5.1.1",
-    "@iconify-json/devicon": "^1.2.2",
+    "@iconify-json/devicon": "^1.2.4",
     "@iconify-json/file-icons": "^1.2.0",
     "@iconify-json/skill-icons": "^1.2.0",
-    "astro": "^4.15.9",
+    "astro": "^4.15.12",
     "astro-icon": "^1.1.1",
     "tailwindcss": "^3.4.13",
     "three": "^0.169.0",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.3"
   },
   "devDependencies": {
     "prettier": "^3.3.3",

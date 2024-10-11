@@ -27,6 +27,10 @@ const { data, slug } = Astro.props.project;
       px-5 py-3 text-white opacity-0 transition-opacity group-hover:opacity-100
       group-focus-visible:opacity-100"
   >
-    {data.title}
+    <div
+      class="inline-block -translate-x-full font-medium transition-transform group-hover:translate-x-0"
+    >
+      {data.title}
+    </div>
   </div>
 </a>
