@@ -4,7 +4,7 @@
 
 <div
   id="canvas-container"
-  class="absolute left-1/2 top-1/2 hidden h-20 w-20 -translate-y-1/2 md:block"
+  class="absolute left-1/2 top-1/2 hidden h-20 w-20 -translate-x-1/2 -translate-y-1/2 sm:block"
 >
 </div>
 
@@ -20,7 +20,6 @@
   let scene: THREE.Scene, camera: THREE.Camera, renderer: THREE.WebGLRenderer;
 
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(bgColor);
 
   const header = document.querySelector('header');
   const container = document.getElementById('canvas-container');
@@ -28,7 +27,7 @@
   const width = 80;
   const height = 80;
 
-  renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(width, height);
 
@@ -84,7 +83,7 @@
   renderer.setAnimationLoop(loop);
 
   function loop() {
-    if (getComputedStyle(renderer.domElement).display == 'none') return;
+    if (getComputedStyle(container as Element).display == 'none') return;
 
     lerp(group.rotation, 'x', groupTarget.x);
     lerp(group.rotation, 'y', groupTarget.y);
