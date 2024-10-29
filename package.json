@@ -19,7 +19,7 @@
     "@iconify-json/devicon": "^1.2.4",
     "@iconify-json/file-icons": "^1.2.0",
     "@iconify-json/skill-icons": "^1.2.0",
-    "astro": "^4.16.6",
+    "astro": "^4.16.7",
     "astro-icon": "^1.1.1",
     "tailwindcss": "^3.4.14",
     "three": "^0.169.0",
