@@ -24,7 +24,7 @@ export default {
       },
       fontFamily: {
         display: ['Rubik', 'san-serif'],
-        sans: ['Roboto', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
       },
       fontSize: {
         base: [`${15 / 16}rem`, 1.7],
@@ -36,4 +36,7 @@ export default {
   },
   plugins: [require('@tailwindcss/typography')],
   darkMode: 'selector',
+  experimental: {
+    optimizeUniversalDefaults: true, // removes unused CSS vars from output
+  },
 };
