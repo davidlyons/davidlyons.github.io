@@ -5,13 +5,13 @@ type Props = {
   project: CollectionEntry<'work'>;
 };
 
-const { data, slug } = Astro.props.project;
+const { data, id } = Astro.props.project;
 ---
 
 <a
   class="group relative overflow-hidden rounded-lg transition-shadow hover:shadow-lg hover:outline-none
     focus-visible:shadow-lg focus-visible:outline-none"
-  href={`/work/${slug}`}
+  href={`/work/${id}`}
 >
   <div class="aspect-square">
     <img
