@@ -29,4 +29,8 @@ export default defineConfig({
       ],
     },
   },
+  // https://docs.astro.build/en/reference/experimental-flags/svg/
+  // experimental: {
+  //   svg: true,
+  // },
 });
