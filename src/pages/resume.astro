@@ -195,8 +195,10 @@ const experience: experienceType[] = [
 </BaseLayout>
 
 <style>
+  @reference "../styles/base.css";
+
   h3 {
-    @apply uppercase tracking-widest;
+    @apply tracking-widest uppercase;
   }
 
   .list-none {
@@ -206,7 +208,7 @@ const experience: experienceType[] = [
       @apply flex items-center;
 
       svg {
-        @apply me-2 flex-shrink-0;
+        @apply me-2 shrink-0;
       }
     }
   }
