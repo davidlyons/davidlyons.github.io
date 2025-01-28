@@ -18,6 +18,7 @@
     "@iconify-json/devicon": "^1.2.11",
     "@iconify-json/file-icons": "^1.2.1",
     "@iconify-json/skill-icons": "^1.2.0",
+    "@iconify-json/vscode-icons": "^1.2.10",
     "astro": "^5.1.9",
     "astro-icon": "^1.1.5",
     "three": "^0.172.0",
