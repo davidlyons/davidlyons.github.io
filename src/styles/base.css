@@ -1,3 +1,4 @@
+/* https://tailwindcss.com/docs/detecting-classes-in-source-files#setting-your-base-path */
 @import 'tailwindcss' source('../../src');
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -12,7 +13,7 @@
   /* use oklch ? */
   --color-neutral-750: #333;
 
-  /* disable default colors */
+  /* https://tailwindcss.com/docs/colors#disabling-default-colors */
   /* keep sky, blue, gray, neutral, black, white */
   --color-red-*: initial;
   --color-orange-*: initial;
