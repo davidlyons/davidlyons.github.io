@@ -2,14 +2,15 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import icon from 'astro-icon';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 
 // https://icon-sets.iconify.design/
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://davidlyons.dev',
-  integrations: [mdx(), sitemap(), icon(), tailwind({ applyBaseStyles: false })],
+  vite: { plugins: [tailwindcss()] },
+  integrations: [mdx(), sitemap(), icon()],
   compressHTML: false,
   markdown: {
     shikiConfig: {
@@ -29,4 +30,8 @@ export default defineConfig({
       ],
     },
   },
+  // https://docs.astro.build/en/reference/experimental-flags/svg/
+  // experimental: {
+  //   svg: true,
+  // },
 });

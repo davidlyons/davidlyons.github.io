@@ -1,6 +1,54 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* https://tailwindcss.com/docs/detecting-classes-in-source-files#setting-your-base-path */
+@import 'tailwindcss' source('../../src');
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1400px;
+
+  /* use oklch ? */
+  --color-neutral-750: #333;
+
+  /* https://tailwindcss.com/docs/colors#disabling-default-colors */
+  /* keep sky, blue, gray, neutral, black, white */
+  --color-red-*: initial;
+  --color-orange-*: initial;
+  --color-amber-*: initial;
+  --color-yellow-*: initial;
+  --color-lime-*: initial;
+  --color-green-*: initial;
+  --color-emerald-*: initial;
+  --color-teal-*: initial;
+  --color-cyan-*: initial;
+  --color-indigo-*: initial;
+  --color-violet-*: initial;
+  --color-purple-*: initial;
+  --color-fuchsia-*: initial;
+  --color-pink-*: initial;
+  --color-rose-*: initial;
+  --color-slate-*: initial;
+  --color-zinc-*: initial;
+  --color-stone-*: initial;
+
+  --font-display: 'Rubik', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+
+  /* 15 / 16 */
+  --text-base: 0.9375rem;
+  --text-base--line-height: 1.7;
+
+  --aspect-retro: 4 / 3;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
 
 @layer base {
   html {
@@ -48,7 +96,7 @@
       counter-increment: step 0;
 
       .line::before {
-        @apply mr-6 inline-block w-4 text-right text-slate-500/50;
+        @apply mr-6 inline-block w-4 text-right text-neutral-500/50;
         content: counter(step);
         counter-increment: step;
       }

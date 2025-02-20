@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import { SITE_TITLE } from '@/consts';
 
 // Import the global.css file here so that it is included on all pages through the use of the <BaseHead /> component.
@@ -74,4 +74,4 @@ const GA_ID = import.meta.env.PUBLIC_GA_ID!;
 
 <link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href={`${Astro.site}rss.xml`} />
 
-<ViewTransitions />
+<ClientRouter />
