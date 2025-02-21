@@ -1,0 +1,210 @@
+---
+title: 'Mac Setup'
+description: 'Recommended apps and settings'
+pubDate: 'Feb 20 2025'
+heroImage: '/blog/blog-placeholder-3.jpg'
+# Kbd Generator https://kbd.hsuan.xyz
+---
+
+## Mac Settings / System Preferences
+
+- Desktop & Dock > Hot Corners > Bottom Left: Desktop
+- Trackpad > Scroll & Zoom > Natural scrolling: disable
+- Trackpad > Tap to click: enable
+- Finder > <kbd>⌘ Command</kbd> + <kbd>⇧ Shift</kbd> + <kbd>.</kbd> to toggle hidden files
+- Increase Mouse tracking speed
+- Keyboard > Key repeat rate: increase
+- Keyboard > Delay until repeat: decrease
+- "Safari" menu > Preferences > Advanced tab > Check the "Show Develop menu in menu bar" box
+
+## Finder Settings
+
+- Finder > View > Show Path Bar
+- Finder > View > Show Status Bar
+- Finder > Settings > Advanced > select "Keep folders on top: In windows when sorting by name"
+  checkbox.
+- Finder > Settings > Advanced. Select or deselect “Show all filename extensions.”
+
+## Applications
+
+[Rectangle](https://rectangleapp.com) keyboard shortcut window management  
+ Commonly used shortcuts
+
+- Maximize: <kbd>⌃ Control</kbd> + <kbd>⌥ Option</kbd> + <kbd>⏎ Enter</kbd>
+- Left/right half: <kbd>⌃ Control</kbd> + <kbd>⌥ Option</kbd> + <kbd>←</kbd><kbd>→</kbd>
+- Prev/next display: <kbd>⌃ Control</kbd> + <kbd>⌥ Option</kbd> + <kbd>⌘ Command</kbd> +
+  <kbd>←</kbd><kbd>→</kbd>
+
+[Chrome](https://www.google.com/chrome) browser  
+Chrome extensions: AdBlock Plus, Autoscroll, Colorzilla, React Developer Tools
+
+[iTerm2](https://iterm2.com) replacement for Terminal, increase font size, profile transparency
+
+- [Wacom Driver](https://www.wacom.com/en-us/support/product-support/drivers) - DTH167 Cintiq Pro 16
+  (2021)
+- [SublimeMerge](https://www.sublimemerge.com) git GUI
+- [Figma](https://www.figma.com/downloads/) design
+- [Blender](https://www.blender.org/download/) 3D graphics
+- [ZBrush 2022.0.8](https://pixologic.com/my-licenses/) digital sculpting
+- [PureRef](https://www.pureref.com) reference images window
+- [VLC](https://www.videolan.org/vlc/) video player
+- [Docker](https://www.docker.com) build and run containerized applications
+- [Resolume Arena 7.18.2 - 17 Nov 2023](https://www.resolume.com/download/) VJ software
+- [HAP Encoder pkg](https://github.com/disguise-one/hap-encoder-adobe-cc/releases) GPU video codec
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp#readme) command-line audio/video downloader
+- [NTFS for Mac](https://www.paragon-software.com/home/ntfs-mac/) Windows file system support
+- [PIA](https://www.privateinternetaccess.com/download) VPN
+
+## Set case-insensitive tab completion in terminal
+
+To quickly `cd` through uppercase folder names in the terminal, add to ~/.zshrc file:
+
+```bash
+# Set case insensitive comparison when lower case letters are typed.
+# Upper case typed letters only match upper case file names
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+autoload -Uz compinit && compinit
+```
+
+## Visual Studio Code
+
+[VS Code](https://code.visualstudio.com/download)
+
+Sign in to sync settings / extensions
+
+VS Code extensions: Astro, Atom One Dark Theme, Babel JavaScript, CSS Nesting Syntax Highlighting,
+Docker, ESLint, GitHub Actions, glTF Tools, Material Icon Theme, MDX, Prettier, Shader languages
+support for VS Code, Sublime Text Keymap and Settings Importer, Tailwind CSS Intellisense
+
+[Default keyboard shortcuts reference](https://code.visualstudio.com/docs/reference/default-keybindings)
+
+Commonly used shortcuts
+
+- View Command Palette: <kbd>⌘ Command</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd>
+- View Terminal: <kbd>⌃ Control</kbd> + <kbd>`</kbd>
+- Switch Workspace: <kbd>⌃ Control</kbd> + <kbd>R</kbd>
+- Cursor to prev/next word: <kbd>⌥ Option</kbd> + <kbd>←</kbd><kbd>→</kbd>
+- Cursor to start/end of line: <kbd>⌘ Command</kbd> + <kbd>←</kbd><kbd>→</kbd>
+- Select words/lines: <kbd>⇧ Shift</kbd> + move cursor shortcut
+- Move line up/down: <kbd>⌥ Option</kbd> + <kbd>↑</kbd><kbd>↓</kbd>
+- Switch tab: <kbd>⌘ Command</kbd> + <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd>
+
+Enable [Emmet](https://emmet.io) within JSX and Prettier Format on Save
+
+1. View Command Palette: <kbd>⌘ Command</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd>
+2. Preferences: Open User Settings (JSON) and add the following:
+
+```json
+"emmet.triggerExpansionOnTab": true,
+"emmet.includeLanguages": {
+  "javascript": "javascriptreact"
+},
+"editor.formatOnSave": true,
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+```
+
+To open the current working directory in VS Code from the terminal with the command `code .`
+
+1. View Command Palette: <kbd>⌘ Command</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd>
+2. Install 'code' command in PATH
+
+Set Emmet Wrap With Abbreviation Shortcut
+
+1. View Command Palette: <kbd>⌘ Command</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd>
+2. Emmet Wrap With Abbreviation
+3. Click Settings (Gear icon)
+4. Set Keybinding to: <kbd>⌘ Command</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd>
+<!-- `Ctrl + Shift + W` is default on Windows -->
+
+## Homebrew
+
+Install [Homebrew](https://brew.sh)
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Run these two commands in your terminal to add Homebrew to your PATH:
+
+```bash
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+Xcode Command Line Tools required for installing ffmpeg via homebrew
+
+```bash
+xcode-select --install
+```
+
+- [Git](https://git-scm.com) version control
+- [GitHub CLI](https://cli.github.com) checkout pull requests
+- [ffmpeg](https://www.ffmpeg.org) convert audio and video
+- [ngrok](https://ngrok.com/docs/getting-started) temporarily expose a local development server to
+  the internet
+
+```bash
+brew install git gh ffmpeg ngrok
+```
+
+Add `git uncommit` alias shortcut, updates ~/.gitconfig
+
+```bash
+git config --global alias.uncommit 'reset --soft HEAD~1'
+```
+
+## Node.js
+
+Install via [nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+[Install Node.js Locally with Node Version Manager (nvm)](https://heynode.com/tutorial/install-nodejs-locally-nvm)
+
+```bash
+bash nvm-install.sh
+```
+
+Downloading nvm from git to '~/.nvm'
+
+```bash
+nvm install --lts
+```
+
+Add `node` to PATH
+
+```bash
+nvm which 22.14.0
+```
+
+Add output to ~/.zshrc file:
+
+```bash
+export PATH="/Users/david/.nvm/versions/node/v22.14.0/bin:$PATH"
+```
+
+## Global npm packages
+
+- [npm-check-updates](https://github.com/raineorshine/npm-check-updates)  
+  Install globally to use `npm-check-updates` or the shorter `ncu`
+- [http-server](https://github.com/http-party/http-server) simple command-line server
+- [five-server](https://github.com/yandeu/five-server) dev server with live reload capability
+
+```bash
+npm install --global http-server five-server npm-check-updates
+```
+
+## Music Apps
+
+- [GuitarPro](https://www.guitar-pro.com) tab editor and player
+- [TuxGuitar](https://www.tuxguitar.app) free tab editor and player
+- [Reaper](https://www.reaper.fm/download.php) Digital Audio Workstation
+- [Motu M4 Driver](https://motu.com/en-us/download/product/410/#1823) audio interface
+
+### Neural DSP Plugins
+
+Fortin Cali  
+Archetype: Nolly X  
+iLok License Manager  
+[Downloads](https://neuraldsp.com/downloads)  
+[Plugin quick start guide](https://neuraldsp.com/getting-started/plugin-quick-start-guide#purchased-license)  
+VST2: Macintosh HD/Library/Audio/Plug-ins/VST  
+Standalone App: Macintosh HD/Applications/Neural DSP
