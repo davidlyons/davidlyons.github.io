@@ -1,7 +1,7 @@
 ---
 title: 'Mac Setup'
 description: 'Recommended apps and settings'
-pubDate: 'Feb 20 2025'
+pubDate: 'Feb 22 2025'
 heroImage: '/blog/blog-placeholder-3.jpg'
 # Kbd Generator https://kbd.hsuan.xyz
 ---
@@ -48,7 +48,7 @@ heroImage: '/blog/blog-placeholder-3.jpg'
 
 - [Wacom Driver](https://www.wacom.com/en-us/support/product-support/drivers) - DTH167 Cintiq Pro 16
   (2021)
-- [SublimeMerge](https://www.sublimemerge.com) git GUI
+- [Sublime Merge](https://www.sublimemerge.com) git GUI
 - [Figma](https://www.figma.com/downloads/) design
 - [Blender](https://www.blender.org/download/) 3D graphics
 - [ZBrush 2022.0.8](https://pixologic.com/my-licenses/) digital sculpting
@@ -58,8 +58,8 @@ heroImage: '/blog/blog-placeholder-3.jpg'
 - [Resolume Arena 7.18.2 - 17 Nov 2023](https://www.resolume.com/download/) VJ software
 - [HAP Encoder pkg](https://github.com/disguise-one/hap-encoder-adobe-cc/releases) GPU video codec
 - [ffmpeg](https://www.ffmpeg.org) command-line audio/video converter  
-  Download static binary, move to /usr/local/bin to include in PATH, allow in Privacy & Security
-  after first run
+  Download static binary, move to /usr/local/bin to add `ffmpeg` to PATH, allow in Privacy &
+  Security after first run
 - [HandBrake](https://handbrake.fr/) video transcoder
 - [PIA](https://www.privateinternetaccess.com/download) VPN
 - ~~[NTFS for Mac](https://www.paragon-software.com/home/ntfs-mac/) Windows file system support~~
@@ -137,13 +137,13 @@ Set Emmet Wrap With Abbreviation Shortcut
 
 ## Homebrew
 
-Install [Homebrew](https://brew.sh)
+Install [Homebrew](https://brew.sh) package manager
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Run these two commands in your terminal to add Homebrew to your PATH:
+Run these two commands in your terminal to add `brew` to PATH:
 
 ```bash
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
@@ -176,7 +176,8 @@ git config --global alias.uncommit 'reset --soft HEAD~1'
 
 ## Node.js
 
-Install via [nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+JavaScript runtime environment, install via
+[nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
 [Install Node.js Locally with Node Version Manager (nvm)](https://heynode.com/tutorial/install-nodejs-locally-nvm)
 

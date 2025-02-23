@@ -4,7 +4,10 @@ import BlogPost from '@/layouts/BlogPost.astro';
 import { components } from '@/components/mdx/index.astro';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
+  const posts = await getCollection('blog', ({ data }) =>
+    // Filter out content entries with `draft: true` only when building for production
+    import.meta.env.PROD ? data.draft !== true : true
+  );
   return posts.map((post) => ({
     params: { slug: post.id },
     props: post,
