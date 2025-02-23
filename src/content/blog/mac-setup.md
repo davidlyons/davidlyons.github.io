@@ -27,18 +27,24 @@ heroImage: '/blog/blog-placeholder-3.jpg'
 
 ## Applications
 
-[Rectangle](https://rectangleapp.com) keyboard shortcut window management  
- Commonly used shortcuts
+- [Rectangle](https://rectangleapp.com) keyboard shortcut window management  
+  Commonly used shortcuts
 
-- Maximize: <kbd>⌃ Control</kbd> + <kbd>⌥ Option</kbd> + <kbd>⏎ Enter</kbd>
-- Left/right half: <kbd>⌃ Control</kbd> + <kbd>⌥ Option</kbd> + <kbd>←</kbd><kbd>→</kbd>
-- Prev/next display: <kbd>⌃ Control</kbd> + <kbd>⌥ Option</kbd> + <kbd>⌘ Command</kbd> +
-  <kbd>←</kbd><kbd>→</kbd>
+  - Maximize: <kbd>⌃ Control</kbd> + <kbd>⌥ Option</kbd> + <kbd>⏎ Enter</kbd>
+  - Left/right half: <kbd>⌃ Control</kbd> + <kbd>⌥ Option</kbd> + <kbd>←</kbd><kbd>→</kbd>
+  - Prev/next display: <kbd>⌃ Control</kbd> + <kbd>⌥ Option</kbd> + <kbd>⌘ Command</kbd> +
+    <kbd>←</kbd><kbd>→</kbd>
 
-[Chrome](https://www.google.com/chrome) browser  
-Chrome extensions: AdBlock Plus, Autoscroll, Colorzilla, React Developer Tools
+- [Chrome](https://www.google.com/chrome) web browser  
+  Extensions: [AdBlock Plus](https://chromewebstore.google.com/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb),
+  [Autoscroll 2.0](https://chromewebstore.google.com/detail/autoscroll-20/kkgmmlflilcfcogmfpnhakfamdkdcbpl),
+  [ColorZilla](https://chromewebstore.google.com/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp),
+  [React Developer Tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 
-[iTerm2](https://iterm2.com) replacement for Terminal, increase font size, profile transparency
+- [iTerm2](https://iterm2.com) replacement for Terminal  
+  Settings > Profiles:  
+  Text > Increase font size, Window > adjust transparency, Keys > Key Mappings preset:
+  [Natural Text Editing](https://superuser.com/a/1704086)
 
 - [Wacom Driver](https://www.wacom.com/en-us/support/product-support/drivers) - DTH167 Cintiq Pro 16
   (2021)
@@ -51,9 +57,12 @@ Chrome extensions: AdBlock Plus, Autoscroll, Colorzilla, React Developer Tools
 - [Docker](https://www.docker.com) build and run containerized applications
 - [Resolume Arena 7.18.2 - 17 Nov 2023](https://www.resolume.com/download/) VJ software
 - [HAP Encoder pkg](https://github.com/disguise-one/hap-encoder-adobe-cc/releases) GPU video codec
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp#readme) command-line audio/video downloader
-- [NTFS for Mac](https://www.paragon-software.com/home/ntfs-mac/) Windows file system support
+- [ffmpeg](https://www.ffmpeg.org) command-line audio/video converter  
+  Download static binary, move to /usr/local/bin to include in PATH, allow in Privacy & Security
+  after first run
+- [HandBrake](https://handbrake.fr/) video transcoder
 - [PIA](https://www.privateinternetaccess.com/download) VPN
+- ~~[NTFS for Mac](https://www.paragon-software.com/home/ntfs-mac/) Windows file system support~~
 
 ## Set case-insensitive tab completion in terminal
 
@@ -88,6 +97,7 @@ Commonly used shortcuts
 - Select words/lines: <kbd>⇧ Shift</kbd> + move cursor shortcut
 - Move line up/down: <kbd>⌥ Option</kbd> + <kbd>↑</kbd><kbd>↓</kbd>
 - Switch tab: <kbd>⌘ Command</kbd> + <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd>
+- Preview markdown: <kbd>⇧ Shift</kbd> + <kbd>⌘ Command</kbd> + <kbd>V</kbd>
 
 Enable [Emmet](https://emmet.io) within JSX and Prettier Format on Save
 
@@ -131,25 +141,27 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
-Xcode Command Line Tools required for installing ffmpeg via homebrew
+Xcode Command Line Tools required for installing ffmpeg or yt-dlp via Homebrew
 
 ```bash
 xcode-select --install
 ```
 
 - [Git](https://git-scm.com) version control
-- [GitHub CLI](https://cli.github.com) checkout pull requests
-- [ffmpeg](https://www.ffmpeg.org) convert audio and video
+- [GitHub CLI](https://cli.github.com) checkout pull requests and auth login to switch accounts
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp#readme) command-line audio/video downloader
 - [ngrok](https://ngrok.com/docs/getting-started) temporarily expose a local development server to
   the internet
 
 ```bash
-brew install git gh ffmpeg ngrok
+brew install git gh yt-dlp ngrok
 ```
 
-Add `git uncommit` alias shortcut, updates ~/.gitconfig
+Set your name and email and add `git uncommit` alias shortcut, updates ~/.gitconfig
 
 ```bash
+git config --global user.name "Mona Lisa"
+git config --global user.email "YOUR_EMAIL"
 git config --global alias.uncommit 'reset --soft HEAD~1'
 ```
 
