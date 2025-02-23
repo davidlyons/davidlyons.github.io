@@ -81,6 +81,8 @@ autoload -Uz compinit && compinit
 
 Sign in to sync settings / extensions
 
+View > Appearance > Activity Bar Position: Hidden
+
 VS Code extensions: Astro, Atom One Dark Theme, Babel JavaScript, CSS Nesting Syntax Highlighting,
 Docker, ESLint, GitHub Actions, glTF Tools, Material Icon Theme, MDX, Prettier, Shader languages
 support for VS Code, Sublime Text Keymap and Settings Importer, Tailwind CSS Intellisense
@@ -89,14 +91,21 @@ support for VS Code, Sublime Text Keymap and Settings Importer, Tailwind CSS Int
 
 Commonly used shortcuts
 
-- View Command Palette: <kbd>⌘ Command</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd>
+- View Command Palette: <kbd>⇧ Shift</kbd> + <kbd>⌘ Command</kbd> + <kbd>P</kbd>
 - View Terminal: <kbd>⌃ Control</kbd> + <kbd>`</kbd>
 - Switch Workspace: <kbd>⌃ Control</kbd> + <kbd>R</kbd>
 - Cursor to prev/next word: <kbd>⌥ Option</kbd> + <kbd>←</kbd><kbd>→</kbd>
 - Cursor to start/end of line: <kbd>⌘ Command</kbd> + <kbd>←</kbd><kbd>→</kbd>
 - Select words/lines: <kbd>⇧ Shift</kbd> + move cursor shortcut
 - Move line up/down: <kbd>⌥ Option</kbd> + <kbd>↑</kbd><kbd>↓</kbd>
+- Add Next Occurence: <kbd>⌘ Command</kbd> + <kbd>D</kbd>
+- Copy Line Down: <kbd>⇧ Shift</kbd> + <kbd>⌘ Command</kbd> + <kbd>D</kbd>
 - Switch tab: <kbd>⌘ Command</kbd> + <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd>
+- Find: <kbd>⌘ Command</kbd> + <kbd>F</kbd>
+- Find in Files: <kbd>⇧ Shift</kbd> + <kbd>⌘ Command</kbd> + <kbd>F</kbd>
+- Explorer: <kbd>⇧ Shift</kbd> + <kbd>⌘ Command</kbd> + <kbd>E</kbd>
+- Extensions: <kbd>⇧ Shift</kbd> + <kbd>⌘ Command</kbd> + <kbd>X</kbd>
+- Toggle Primary Side Bar: <kbd>⌘ Command</kbd> + <kbd>K</kbd> + <kbd>⌘ Command</kbd> + <kbd>B</kbd>
 - Preview markdown: <kbd>⇧ Shift</kbd> + <kbd>⌘ Command</kbd> + <kbd>V</kbd>
 
 Enable [Emmet](https://emmet.io) within JSX and Prettier Format on Save
