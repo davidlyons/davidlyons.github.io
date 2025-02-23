@@ -4,6 +4,9 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* https://github.com/tailwindlabs/tailwindcss-typography/issues/329 */
+@custom-variant prose-inline-code (&.prose :where(:not(pre)>code):not(:where([class~="not-prose"] *)));
+
 @theme {
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -11,7 +14,7 @@
   --breakpoint-xl: 1200px;
   --breakpoint-2xl: 1400px;
 
-  /* use oklch ? */
+  /* use https://oklch.com ? */
   --color-neutral-750: #333;
 
   /* https://tailwindcss.com/docs/colors#disabling-default-colors */
