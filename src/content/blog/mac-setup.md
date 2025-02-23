@@ -2,7 +2,8 @@
 title: 'Mac Setup'
 description: 'Recommended apps and settings'
 pubDate: 'Feb 22 2025'
-heroImage: '/blog/blog-placeholder-3.jpg'
+cover: './macbook.jpg'
+coverAlt: 'MacBook Pro'
 # Kbd Generator https://kbd.hsuan.xyz
 ---
 
@@ -11,19 +12,18 @@ heroImage: '/blog/blog-placeholder-3.jpg'
 - Desktop & Dock > Hot Corners > Bottom Left: Desktop
 - Trackpad > Scroll & Zoom > Natural scrolling: disable
 - Trackpad > Tap to click: enable
-- Finder > <kbd>⌘ Command</kbd> + <kbd>⇧ Shift</kbd> + <kbd>.</kbd> to toggle hidden files
 - Increase Mouse tracking speed
 - Keyboard > Key repeat rate: increase
 - Keyboard > Delay until repeat: decrease
-- "Safari" menu > Preferences > Advanced tab > Check the "Show Develop menu in menu bar" box
+- "Safari" menu > Preferences > Advanced > Enable "Show Develop menu in menu bar"
 
 ## Finder Settings
 
-- Finder > View > Show Path Bar
-- Finder > View > Show Status Bar
-- Finder > Settings > Advanced > select "Keep folders on top: In windows when sorting by name"
-  checkbox.
-- Finder > Settings > Advanced. Select or deselect “Show all filename extensions.”
+- Toggle hidden files: <kbd>⌘ Command</kbd> + <kbd>⇧ Shift</kbd> + <kbd>.</kbd>
+- View > Show Path Bar
+- View > Show Status Bar
+- Settings > Advanced > Enable "Keep folders on top: In windows when sorting by name"
+- Settings > Advanced > Enable "Show all filename extensions"
 
 ## Applications
 
@@ -31,9 +31,9 @@ heroImage: '/blog/blog-placeholder-3.jpg'
   Commonly used shortcuts
 
   - Maximize: <kbd>⌃ Control</kbd> + <kbd>⌥ Option</kbd> + <kbd>⏎ Enter</kbd>
-  - Left/right half: <kbd>⌃ Control</kbd> + <kbd>⌥ Option</kbd> + <kbd>←</kbd><kbd>→</kbd>
+  - Left/right half: <kbd>⌃ Control</kbd> + <kbd>⌥ Option</kbd> + <kbd>←</kbd> <kbd>→</kbd>
   - Prev/next display: <kbd>⌃ Control</kbd> + <kbd>⌥ Option</kbd> + <kbd>⌘ Command</kbd> +
-    <kbd>←</kbd><kbd>→</kbd>
+    <kbd>←</kbd> <kbd>→</kbd>
 
 - [Chrome](https://www.google.com/chrome) web browser  
   Extensions: [AdBlock Plus](https://chromewebstore.google.com/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb),
@@ -42,9 +42,11 @@ heroImage: '/blog/blog-placeholder-3.jpg'
   [React Developer Tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 
 - [iTerm2](https://iterm2.com) replacement for Terminal  
-  Settings > Profiles:  
-  Text > Increase font size, Window > adjust transparency, Keys > Key Mappings preset:
-  [Natural Text Editing](https://superuser.com/a/1704086)
+  Settings > Profiles:
+
+  - Text > Increase font size
+  - Window > adjust transparency
+  - Keys > Key Mappings preset: [Natural Text Editing](https://superuser.com/a/1704086)
 
 - [Wacom Driver](https://www.wacom.com/en-us/support/product-support/drivers) - DTH167 Cintiq Pro 16
   (2021)
@@ -77,15 +79,15 @@ autoload -Uz compinit && compinit
 
 ## Visual Studio Code
 
-[VS Code](https://code.visualstudio.com/download)
+[VS Code](https://code.visualstudio.com/download) IDE
 
 Sign in to sync settings / extensions
 
 View > Appearance > Activity Bar Position: Hidden
 
-VS Code extensions: Astro, Atom One Dark Theme, Babel JavaScript, CSS Nesting Syntax Highlighting,
-Docker, ESLint, GitHub Actions, glTF Tools, Material Icon Theme, MDX, Prettier, Shader languages
-support for VS Code, Sublime Text Keymap and Settings Importer, Tailwind CSS Intellisense
+Extensions: Astro, Atom One Dark Theme, Babel JavaScript, CSS Nesting Syntax Highlighting, Docker,
+ESLint, GitHub Actions, glTF Tools, Material Icon Theme, MDX, Prettier, Shader languages support for
+VS Code, Sublime Text Keymap and Settings Importer, Tailwind CSS Intellisense
 
 [Default keyboard shortcuts reference](https://code.visualstudio.com/docs/reference/default-keybindings)
 
@@ -94,10 +96,10 @@ Commonly used shortcuts
 - View Command Palette: <kbd>⇧ Shift</kbd> + <kbd>⌘ Command</kbd> + <kbd>P</kbd>
 - View Terminal: <kbd>⌃ Control</kbd> + <kbd>`</kbd>
 - Switch Workspace: <kbd>⌃ Control</kbd> + <kbd>R</kbd>
-- Cursor to prev/next word: <kbd>⌥ Option</kbd> + <kbd>←</kbd><kbd>→</kbd>
-- Cursor to start/end of line: <kbd>⌘ Command</kbd> + <kbd>←</kbd><kbd>→</kbd>
+- Cursor to prev/next word: <kbd>⌥ Option</kbd> + <kbd>←</kbd> <kbd>→</kbd>
+- Cursor to start/end of line: <kbd>⌘ Command</kbd> + <kbd>←</kbd> <kbd>→</kbd>
 - Select words/lines: <kbd>⇧ Shift</kbd> + move cursor shortcut
-- Move line up/down: <kbd>⌥ Option</kbd> + <kbd>↑</kbd><kbd>↓</kbd>
+- Move line up/down: <kbd>⌥ Option</kbd> + <kbd>↑</kbd> <kbd>↓</kbd>
 - Add Next Occurence: <kbd>⌘ Command</kbd> + <kbd>D</kbd>
 - Copy Line Down: <kbd>⇧ Shift</kbd> + <kbd>⌘ Command</kbd> + <kbd>D</kbd>
 - Switch tab: <kbd>⌘ Command</kbd> + <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd>
@@ -200,7 +202,7 @@ nvm which 22.14.0
 Add output to ~/.zshrc file:
 
 ```bash
-export PATH="/Users/david/.nvm/versions/node/v22.14.0/bin:$PATH"
+export PATH="$HOME/.nvm/versions/node/v22.14.0/bin:$PATH"
 ```
 
 ## Global npm packages
