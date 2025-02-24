@@ -4,7 +4,7 @@ import SocialLink from './SocialLink.astro';
 ---
 
 <footer class="py-6 text-center text-neutral-500 dark:text-neutral-300/30">
-  <div class="container relative items-center sm:flex sm:justify-between">
+  <div class="relative container items-center sm:flex sm:justify-between">
     <a
       href="mailto:david@davidlyons.dev"
       class="inline-flex items-center text-sm text-neutral-500 transition-colors hover:text-neutral-700
@@ -13,16 +13,14 @@ import SocialLink from './SocialLink.astro';
       <Icon name="envelope" size={16} class="me-2" />
       david@davidlyons.dev
     </a>
-    <div class="mb-4 mt-2 sm:order-3 sm:my-0">
-      <SocialLink
-        href="https://www.linkedin.com/in/davidxlyons"
-        label="LinkedIn"
-        icon="linkedin"
-      /><SocialLink
+    <div class="mt-2 mb-4 sm:order-3 sm:my-0">
+      <SocialLink href="https://www.linkedin.com/in/davidxlyons" label="LinkedIn" icon="linkedin" />
+      <!-- <SocialLink
         href="https://x.com/davidxlyons"
         label="X / Twitter"
         icon="twitter-x"
-      /><SocialLink href="https://github.com/davidlyons" label="GitHub" icon="github" /><SocialLink
+      /> -->
+      <SocialLink href="https://github.com/davidlyons" label="GitHub" icon="github" /><SocialLink
         href="https://codepen.io/davidlyons"
         label="Codepen"
         icon="codepen"
@@ -38,7 +36,7 @@ import SocialLink from './SocialLink.astro';
         type="application/rss+xml"
       />
     </div>
-    <div class="left-1/2 top-1/2 text-sm sm:absolute sm:-translate-x-1/2 sm:-translate-y-1/2">
+    <div class="top-1/2 left-1/2 text-sm sm:absolute sm:-translate-x-1/2 sm:-translate-y-1/2">
       &copy; {new Date().getFullYear()} David Lyons
     </div>
   </div>

@@ -7,6 +7,9 @@ coverAlt: 'MacBook Pro'
 # Kbd Generator https://kbd.hsuan.xyz
 ---
 
+Recommended Mac settings, app downloads and shortcuts primarily for getting a web development
+environment up and running.
+
 ## Mac Settings / System Preferences
 
 - Desktop & Dock > Hot Corners > Bottom Left: Desktop
@@ -27,6 +30,8 @@ coverAlt: 'MacBook Pro'
 
 ## Applications
 
+### Utilities
+
 - [Rectangle](https://rectangleapp.com) keyboard shortcut window management  
   Commonly used shortcuts
 
@@ -41,34 +46,31 @@ coverAlt: 'MacBook Pro'
   [ColorZilla](https://chromewebstore.google.com/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp),
   [React Developer Tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 
+### Web Development
+
 - [iTerm2](https://iterm2.com) replacement for Terminal  
+  Commonly used commands: `cd` `ls` `open .` `clear`  
   Settings > Profiles:
 
-  - Text > Increase font size
+  - Text > increase font size
   - Window > adjust transparency
   - Keys > Key Mappings preset: [Natural Text Editing](https://superuser.com/a/1704086)
 
-- [Wacom Driver](https://www.wacom.com/en-us/support/product-support/drivers) - DTH167 Cintiq Pro 16
-  (2021)
 - [Sublime Merge](https://www.sublimemerge.com) git GUI
 - [Figma](https://www.figma.com/downloads/) design
-- [Blender](https://www.blender.org/download/) 3D graphics
+- ~~[Docker](https://www.docker.com) build and run containerized applications~~
+
+### 3D Graphics
+
+- [Blender](https://www.blender.org/download/) DCC
 - [ZBrush 2022.0.8](https://pixologic.com/my-licenses/) digital sculpting
+- [Wacom Driver](https://www.wacom.com/en-us/support/product-support/drivers) - DTH167 Cintiq Pro 16
+  (2021)
 - [PureRef](https://www.pureref.com) reference images window
-- [VLC](https://www.videolan.org/vlc/) video player
-- [Docker](https://www.docker.com) build and run containerized applications
-- [Resolume Arena 7.18.2 - 17 Nov 2023](https://www.resolume.com/download/) VJ software
-- [HAP Encoder pkg](https://github.com/disguise-one/hap-encoder-adobe-cc/releases) GPU video codec
-- [ffmpeg](https://www.ffmpeg.org) command-line audio/video converter  
-  Download static binary, move to /usr/local/bin to add `ffmpeg` to PATH, allow in Privacy &
-  Security after first run
-- [HandBrake](https://handbrake.fr/) video transcoder
-- [PIA](https://www.privateinternetaccess.com/download) VPN
-- ~~[NTFS for Mac](https://www.paragon-software.com/home/ntfs-mac/) Windows file system support~~
 
 ## Set case-insensitive tab completion in terminal
 
-To quickly `cd` through uppercase folder names in the terminal, add to ~/.zshrc file:
+To quickly tab through uppercase folder names in the terminal, add to ~/.zshrc file:
 
 ```bash
 # Set case insensitive comparison when lower case letters are typed.
@@ -158,14 +160,17 @@ Xcode Command Line Tools required for installing ffmpeg or yt-dlp via Homebrew
 xcode-select --install
 ```
 
-- [Git](https://git-scm.com) version control
+- [Git](https://git-scm.com) version control  
+  Commonly used [commands](https://git-scm.com/docs): `status` `add` `commit` `checkout` `branch`
+  `reset` `merge` `push` `pull` `diff` `log` `stash`  
+  After a merge + commit, you are inside vim. To save changes and quit:  
+  <kbd>Escape</kbd> `:wq` <kbd>⏎ Enter</kbd>
 - [GitHub CLI](https://cli.github.com) checkout pull requests and auth login to switch accounts
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp#readme) command-line audio/video downloader
-- [ngrok](https://ngrok.com/docs/getting-started) temporarily expose a local development server to
-  the internet
+- ~~[ngrok](https://ngrok.com/docs/getting-started) temporarily expose a local development server to
+  the internet~~
 
 ```bash
-brew install git gh yt-dlp ngrok
+brew install git gh
 ```
 
 Set your name and email and add `git uncommit` alias shortcut, updates ~/.gitconfig
@@ -216,19 +221,29 @@ export PATH="$HOME/.nvm/versions/node/v22.14.0/bin:$PATH"
 npm install --global http-server five-server npm-check-updates
 ```
 
-## Music Apps
+## Extra
 
-- [GuitarPro](https://www.guitar-pro.com) tab editor and player
+### Video
+
+- [VLC](https://www.videolan.org/vlc/) video player
+- [OBS Studio](https://obsproject.com) video recording
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp#readme) command-line YouTube audio/video downloader
+  `brew install yt-dlp`
+- [ffmpeg](https://www.ffmpeg.org) command-line audio/video converter  
+  Download static binary, move to /usr/local/bin to add `ffmpeg` to PATH, allow in Privacy &
+  Security after first run
+- [HandBrake](https://handbrake.fr/) video transcoder
+- [Resolume Arena 7.18.2 - 17 Nov 2023](https://www.resolume.com/download/) VJ software
+- [HAP Encoder pkg](https://github.com/disguise-one/hap-encoder-adobe-cc/releases) GPU video codec
+
+### Guitar
+
+- [Guitar Pro](https://www.guitar-pro.com) tab editor and player
 - [TuxGuitar](https://www.tuxguitar.app) free tab editor and player
-- [Reaper](https://www.reaper.fm/download.php) Digital Audio Workstation
+- [Reaper](https://www.reaper.fm/download.php) digital audio workstation
 - [Motu M4 Driver](https://motu.com/en-us/download/product/410/#1823) audio interface
-
-### Neural DSP Plugins
-
-Fortin Cali  
-Archetype: Nolly X  
-iLok License Manager  
-[Downloads](https://neuraldsp.com/downloads)  
-[Plugin quick start guide](https://neuraldsp.com/getting-started/plugin-quick-start-guide#purchased-license)  
-VST2: Macintosh HD/Library/Audio/Plug-ins/VST  
-Standalone App: Macintosh HD/Applications/Neural DSP
+- [Neural DSP Plugins](https://neuraldsp.com/downloads) digital amp sims  
+  [Plugin quick start guide](https://neuraldsp.com/getting-started/plugin-quick-start-guide#purchased-license)  
+  Archetype Nolly X, Fortin Cali, iLok License Manager  
+  VST2: Macintosh HD/Library/Audio/Plug-ins/VST  
+  Standalone App: Macintosh HD/Applications/Neural DSP
