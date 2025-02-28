@@ -28,8 +28,10 @@ const { title, description, pubDate, updatedDate, cover, coverAlt } = Astro.prop
   </div>
   <div
     class="prose dark:prose-invert prose-headings:font-medium prose-th:text-left prose-a:text-blue-700
-      prose-a:hover:text-blue-900 prose-a:dark:text-sky-400 prose-a:dark:hover:text-sky-300
-      prose-inline-code:rounded prose-inline-code:bg-neutral-900 prose-inline-code:before:content-none
+      prose-a:hover:text-blue-900 prose-a:decoration-blue-700/50 prose-a:dark:text-sky-400
+      prose-a:dark:hover:text-sky-300 prose-a:underline prose-a:underline-offset-4
+      prose-a:dark:decoration-sky-400/50 prose-a:hover:decoration-current prose-inline-code:rounded
+      prose-inline-code:bg-neutral-900 prose-inline-code:before:content-none
       prose-inline-code:after:content-none prose-inline-code:py-0.5 prose-inline-code:px-1.5
       prose-inline-code:font-medium mx-auto"
   >
@@ -44,7 +46,9 @@ const { title, description, pubDate, updatedDate, cover, coverAlt } = Astro.prop
           </div>
         )
       }
-      <h1 class="mb-11 border-b border-neutral-700 pb-8 text-5xl font-medium dark:text-white">
+      <h1
+        class="mb-11 border-b border-neutral-300 pb-8 text-5xl font-medium dark:border-neutral-700 dark:text-white"
+      >
         {title}
       </h1>
     </div>
