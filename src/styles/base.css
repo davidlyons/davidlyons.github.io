@@ -17,27 +17,6 @@
   /* use https://oklch.com ? */
   --color-neutral-750: #333;
 
-  /* https://tailwindcss.com/docs/colors#disabling-default-colors */
-  /* keep sky, blue, gray, neutral, black, white */
-  --color-red-*: initial;
-  --color-orange-*: initial;
-  --color-amber-*: initial;
-  --color-yellow-*: initial;
-  --color-lime-*: initial;
-  --color-green-*: initial;
-  --color-emerald-*: initial;
-  --color-teal-*: initial;
-  --color-cyan-*: initial;
-  --color-indigo-*: initial;
-  --color-violet-*: initial;
-  --color-purple-*: initial;
-  --color-fuchsia-*: initial;
-  --color-pink-*: initial;
-  --color-rose-*: initial;
-  --color-slate-*: initial;
-  --color-zinc-*: initial;
-  --color-stone-*: initial;
-
   --font-display: 'Rubik', sans-serif;
   --font-sans: 'Inter', sans-serif;
 
