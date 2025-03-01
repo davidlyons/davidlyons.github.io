@@ -18,21 +18,22 @@ environment up and running.
 - Increase Mouse tracking speed
 - Keyboard > Key repeat rate: increase
 - Keyboard > Delay until repeat: decrease
-- "Safari" menu > Preferences > Advanced > Enable "Show Develop menu in menu bar"
+- "Safari" menu > Preferences > Advanced:  
+  Enable "Show Develop menu in menu bar"
 
 ## Finder Settings
 
 - Toggle hidden files: <kbd>⌘ Command</kbd> + <kbd>⇧ Shift</kbd> + <kbd>.</kbd>
-- View > Show Path Bar
-- View > Show Status Bar
-- Settings > Advanced > Enable "Keep folders on top: In windows when sorting by name"
-- Settings > Advanced > Enable "Show all filename extensions"
+- View > Show Path Bar and Show Status Bar
+- Settings > Advanced:  
+  Enable "Keep folders on top: In windows when sorting by name"  
+  Enable "Show all filename extensions"
 
 ## Applications
 
 ### Utilities
 
-- [Rectangle](https://rectangleapp.com) keyboard shortcut window management  
+- [Rectangle](https://rectangleapp.com) window management  
   Commonly used shortcuts
 
   - Maximize: <kbd>⌃ Control</kbd> + <kbd>⌥ Option</kbd> + <kbd>⏎ Enter</kbd>
@@ -192,7 +193,7 @@ JavaScript runtime environment, install via
 bash nvm-install.sh
 ```
 
-Downloading nvm from git to '~/.nvm'
+Downloading nvm from git to ~/.nvm
 
 ```bash
 nvm install --lts
