@@ -155,12 +155,6 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
-Xcode Command Line Tools required for installing ffmpeg or yt-dlp via Homebrew
-
-```bash
-xcode-select --install
-```
-
 - [Git](https://git-scm.com) version control  
   Commonly used [commands](https://git-scm.com/docs): `status` `add` `commit` `checkout` `branch`
   `reset` `merge` `push` `pull` `diff` `log` `stash`  
@@ -221,30 +215,3 @@ export PATH="$HOME/.nvm/versions/node/v22.14.0/bin:$PATH"
 ```bash
 npm install --global http-server five-server npm-check-updates
 ```
-
-## Extra
-
-### Video
-
-- [VLC](https://www.videolan.org/vlc/) video player
-- [OBS Studio](https://obsproject.com) video recording
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp#readme) command-line YouTube audio/video downloader
-  `brew install yt-dlp`
-- [ffmpeg](https://www.ffmpeg.org) command-line audio/video converter  
-  Download static binary, move to /usr/local/bin to add `ffmpeg` to PATH, allow in Privacy &
-  Security after first run
-- [HandBrake](https://handbrake.fr/) video transcoder
-- [Resolume Arena 7.18.2 - 17 Nov 2023](https://www.resolume.com/download/) VJ software
-- [HAP Encoder pkg](https://github.com/disguise-one/hap-encoder-adobe-cc/releases) GPU video codec
-
-### Guitar
-
-- [Guitar Pro](https://www.guitar-pro.com) tab editor and player
-- [TuxGuitar](https://www.tuxguitar.app) free tab editor and player
-- [Reaper](https://www.reaper.fm/download.php) digital audio workstation
-- [Motu M4 Driver](https://motu.com/en-us/download/product/410/#1823) audio interface
-- [Neural DSP Plugins](https://neuraldsp.com/downloads) digital amp sims  
-  [Plugin quick start guide](https://neuraldsp.com/getting-started/plugin-quick-start-guide#purchased-license)  
-  Archetype Nolly X, Fortin Cali, iLok License Manager  
-  VST2: Macintosh HD/Library/Audio/Plug-ins/VST  
-  Standalone App: Macintosh HD/Applications/Neural DSP
