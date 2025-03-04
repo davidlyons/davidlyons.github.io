@@ -14,11 +14,8 @@
   --breakpoint-xl: 1200px;
   --breakpoint-2xl: 1400px;
 
-  /* use https://oklch.com ? */
-  --color-neutral-750: #333;
-
   --font-display: 'Rubik', sans-serif;
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: 'Inter Variable', sans-serif;
 
   /* 15 / 16 */
   --text-base: 0.9375rem;

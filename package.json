@@ -15,6 +15,8 @@
     "@astrojs/mdx": "^4.1.0",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.2.1",
+    "@fontsource-variable/inter": "^5.2.5",
+    "@fontsource/rubik": "^5.2.5",
     "@iconify-json/devicon": "^1.2.17",
     "@iconify-json/file-icons": "^1.2.1",
     "@iconify-json/skill-icons": "^1.2.0",
