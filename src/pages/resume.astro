@@ -63,8 +63,9 @@ const experience: experienceType[] = [
     <div class="ms-6">
       <a
         class="inline-block rounded border border-current px-2 py-1 text-center text-[13px] text-indigo-700
-          transition-colors hover:border-indigo-700 hover:bg-indigo-700 hover:text-white dark:text-neutral-500
-          dark:hover:border-neutral-500 dark:hover:bg-neutral-500 dark:hover:text-white"
+          transition-colors hover:border-indigo-700 hover:bg-indigo-700 hover:text-white
+          dark:border-neutral-500 dark:text-neutral-300 dark:hover:border-neutral-200
+          dark:hover:bg-transparent dark:hover:text-white"
         href="/David-Lyons-Resume-2025.pdf"
         title="Download David Lyons Resume PDF"
         download
@@ -80,7 +81,7 @@ const experience: experienceType[] = [
       <div class="mb-lg-0 mb-5 lg:col-span-4">
         <div class="grid grid-cols-2 gap-3">
           <div>
-            <h3 class="mb-3">Languages</h3>
+            <h2 class="mb-3">Languages</h2>
             <ul class="list-none">
               <li><Icon name="devicon:javascript" />JavaScript, ES6+</li>
               <li><Icon name="devicon:html5" />HTML</li>
@@ -90,7 +91,7 @@ const experience: experienceType[] = [
               <li><Icon name="file-icons:terminal" />Command Line</li>
             </ul>
 
-            <h3 class="mb-3">Skills</h3>
+            <h2 class="mb-3">Skills</h2>
             <ul class="list-none">
               <li>Responsive Web Design</li>
               <li>Photo Editing</li>
@@ -105,7 +106,7 @@ const experience: experienceType[] = [
               <li>3D Printing</li>
             </ul>
 
-            <h3 class="mb-3">Currently Learning</h3>
+            <h2 class="mb-3">Currently Learning</h2>
             <ul class="list-none">
               <li><Icon name="devicon:react" /><Icon name="tags/threejs" />React Three Fiber</li>
               <li><Icon name="file-icons:webgl" size={24} />GLSL Shaders</li>
@@ -113,7 +114,7 @@ const experience: experienceType[] = [
             </ul>
           </div>
           <div>
-            <h3 class="mb-3">Tools</h3>
+            <h2 class="mb-3">Tools</h2>
             <ul class="list-none">
               <li><Icon name="tags/threejs" />Three.js</li>
               <li><Icon name="skill-icons:bootstrap" />Bootstrap</li>
@@ -146,7 +147,7 @@ const experience: experienceType[] = [
       </div>
 
       <div class="lg:col-span-7 lg:col-start-6">
-        <h3 class="mb-4">Work Experience</h3>
+        <h2 class="mb-4">Work Experience</h2>
 
         <div class="mb-12 space-y-4">
           {
@@ -156,16 +157,16 @@ const experience: experienceType[] = [
                   <a href={url} target="_blank" rel="noreferrer">
                     {company}
                   </a>
-                  {contract && <span class="opacity-50">• Contract</span>}
+                  {contract && <span class="opacity-60">• Contract</span>}
                 </div>
                 <div>{title}</div>
-                <div class="text-sm font-light opacity-50">{`${start} - ${end} • ${location}`}</div>
+                <div class="text-sm font-light opacity-60">{`${start} - ${end} • ${location}`}</div>
               </div>
             ))
           }
         </div>
 
-        <h3 class="mb-4">Education</h3>
+        <h2 class="mb-4">Education</h2>
 
         <div class="mb-4">
           <div class="font-medium">Texas A&M University</div>
@@ -174,18 +175,19 @@ const experience: experienceType[] = [
               href="https://pvfa.tamu.edu/academics/disciplines/visualization/"
               target="_blank"
               rel="noreferrer"
+              class="font-medium"
             >
               Visualization
             </a>, Dec 2010
           </div>
-          <div class="text-sm font-light opacity-50">
+          <div class="text-sm font-light opacity-60">
             Fall 2007 - Fall 2010 • College Station, TX
           </div>
         </div>
 
         <div>
           <div class="font-medium">The University of Texas at Dallas</div>
-          <div class="text-sm font-light opacity-50">
+          <div class="text-sm font-light opacity-60">
             Spring 2010 semester away in the Arts and Technology department
           </div>
         </div>
@@ -197,7 +199,7 @@ const experience: experienceType[] = [
 <style>
   @reference "../styles/base.css";
 
-  h3 {
+  h2 {
     @apply tracking-widest uppercase;
   }
 
