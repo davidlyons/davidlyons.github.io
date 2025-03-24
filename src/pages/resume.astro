@@ -58,9 +58,9 @@ const experience: experienceType[] = [
 ---
 
 <BaseLayout title="Resume">
-  <div class="mb-11 flex items-center">
+  <div class="mb-11 flex flex-wrap items-center gap-6">
     <h1 class="mb-0 text-3xl font-light dark:text-white">Resume</h1>
-    <div class="ms-6">
+    <div>
       <a
         class="inline-flex items-center rounded border border-current px-3 py-1 text-center text-[13px]
           text-indigo-700 transition-colors hover:border-indigo-700 hover:bg-indigo-700 hover:text-white
@@ -70,7 +70,7 @@ const experience: experienceType[] = [
         title="Download David Lyons Resume PDF"
         download
       >
-        <Icon name="download" class="-ms-0.5 me-2 size-3.5" />
+        <Icon name="download" class="-ms-0.5 me-2 size-3.5 shrink-0" />
         Download PDF
       </a>
     </div>
@@ -78,11 +78,11 @@ const experience: experienceType[] = [
 
   <div class="resume">
     <div class="mb-5 grid lg:grid-cols-12">
-      <div class="mb-lg-0 mb-5 lg:col-span-4">
-        <div class="grid grid-cols-2 gap-3">
+      <div class="mb-14 lg:col-span-4 lg:mb-0">
+        <div class="grid grid-cols-2 gap-3 gap-y-9">
           <div>
             <h2 class="mb-3">Languages</h2>
-            <ul class="list-none">
+            <ul class="mb-9 list-none">
               <li><Icon name="devicon:javascript" />JavaScript, ES6+</li>
               <li><Icon name="devicon:html5" />HTML</li>
               <li><Icon name="devicon:css3" />CSS</li>
@@ -104,13 +104,6 @@ const experience: experienceType[] = [
               <li>Retopology</li>
               <li>UV Layout</li>
               <li>3D Printing</li>
-            </ul>
-
-            <h2 class="mb-3">Currently Learning</h2>
-            <ul class="list-none">
-              <li><Icon name="devicon:react" /><Icon name="tags/threejs" />React Three Fiber</li>
-              <li><Icon name="file-icons:webgl" size={24} />GLSL Shaders</li>
-              <li><Icon name="tags/blender" />Blender</li>
             </ul>
           </div>
           <div>
@@ -141,6 +134,14 @@ const experience: experienceType[] = [
               <li><Icon name="devicon:maya" />Maya</li>
               <li><Icon name="file-icons:zbrush" />ZBrush</li>
               <li><Icon name="tags/resolume" />Resolume</li>
+            </ul>
+          </div>
+          <div class="col-span-2">
+            <h2 class="mb-3">Currently Learning</h2>
+            <ul class="list-none">
+              <li><Icon name="devicon:react" /> React Three Fiber</li>
+              <li><Icon name="devicon:webgpu" />GLSL, WGSL, TSL Shaders</li>
+              <li><Icon name="tags/blender" />Blender</li>
             </ul>
           </div>
         </div>
@@ -204,8 +205,6 @@ const experience: experienceType[] = [
   }
 
   .list-none {
-    @apply mb-9;
-
     li {
       @apply flex items-center;
 
