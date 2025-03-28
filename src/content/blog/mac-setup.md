@@ -20,6 +20,7 @@ environment up and running.
 - Keyboard > Delay until repeat: decrease
 - "Safari" menu > Preferences > Advanced:  
   Enable "Show Develop menu in menu bar"
+- Battery > Options > Prevent automatic sleeping on power adapter when the display is off
 
 ## Finder Settings
 

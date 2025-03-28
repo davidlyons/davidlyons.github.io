@@ -9,8 +9,8 @@ const { data, id } = Astro.props.project;
 ---
 
 <a
-  class="group relative overflow-hidden rounded-lg transition-shadow hover:shadow-lg hover:outline-hidden
-    focus-visible:shadow-lg focus-visible:outline-hidden"
+  class="group relative overflow-hidden rounded-lg transition-shadow duration-300 hover:shadow-lg
+    hover:outline-hidden focus-visible:shadow-lg focus-visible:outline-hidden"
   href={`/work/${id}`}
 >
   <div class="aspect-square">
@@ -24,12 +24,10 @@ const { data, id } = Astro.props.project;
   </div>
   <div
     class="pointer-events-none absolute inset-0 flex flex-col justify-end bg-linear-to-t from-black/60 to-40%
-      px-5 py-3 text-white opacity-0 transition-opacity group-hover:opacity-100
+      px-5 py-3 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100
       group-focus-visible:opacity-100"
   >
-    <div
-      class="inline-block -translate-x-full font-medium transition-transform group-hover:translate-x-0"
-    >
+    <div class="inline-block font-medium">
       {data.title}
     </div>
   </div>
