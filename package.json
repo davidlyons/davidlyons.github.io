@@ -12,29 +12,29 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/mdx": "^4.2.1",
+    "@astrojs/mdx": "^4.2.3",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.3.0",
     "@fontsource-variable/inter": "^5.2.5",
     "@fontsource/rubik": "^5.2.5",
-    "@iconify-json/devicon": "^1.2.21",
+    "@iconify-json/devicon": "^1.2.23",
     "@iconify-json/file-icons": "^1.2.1",
     "@iconify-json/skill-icons": "^1.2.0",
-    "@iconify-json/vscode-icons": "^1.2.17",
-    "astro": "^5.5.4",
+    "@iconify-json/vscode-icons": "^1.2.18",
+    "astro": "^5.5.6",
     "astro-icon": "^1.1.5",
-    "three": "^0.174.0",
+    "three": "^0.175.0",
     "typescript": "^5.8.2"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.0.15",
-    "@types/three": "^0.174.0",
+    "@tailwindcss/vite": "^4.1.0",
+    "@types/three": "^0.175.0",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-classnames": "^0.7.7",
     "prettier-plugin-merge": "^0.7.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^4.0.15"
+    "tailwindcss": "^4.1.0"
   }
 }
