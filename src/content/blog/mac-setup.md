@@ -179,7 +179,7 @@ git config --global alias.uncommit 'reset --soft HEAD~1'
 
 ## pnpm + Node.js
 
-Install [pnpm](https://pnpm.io/installation#on-posix-systems) install pnpm using standalone script:
+Install [pnpm](https://pnpm.io/installation#on-posix-systems) using standalone script:
 
 ```bash
 curl -fsSL https://get.pnpm.io/install.sh | sh -
@@ -205,5 +205,5 @@ use-node-version=22.15.0
 - [five-server](https://github.com/yandeu/five-server) dev server with live reload capability
 
 ```bash
-npm install --global http-server five-server npm-check-updates
+pnpm add --global http-server five-server npm-check-updates
 ```
