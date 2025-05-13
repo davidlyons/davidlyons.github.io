@@ -177,33 +177,24 @@ git config --global user.email "YOUR_EMAIL"
 git config --global alias.uncommit 'reset --soft HEAD~1'
 ```
 
-## Node.js
+## pnpm + Node.js
 
-JavaScript runtime environment, install via
-[nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-[Install Node.js Locally with Node Version Manager (nvm)](https://heynode.com/tutorial/install-nodejs-locally-nvm)
+Install [pnpm](https://pnpm.io/installation#on-posix-systems) install pnpm using standalone script:
 
 ```bash
-bash nvm-install.sh
+curl -fsSL https://get.pnpm.io/install.sh | sh -
 ```
 
-Downloading nvm from git to ~/.nvm
+Install the LTS version of Node.js:
 
 ```bash
-nvm install --lts
+pnpm env use --global lts
 ```
 
-Add `node` to PATH
+Define Node.js version per project in .npmrc:
 
 ```bash
-nvm which 22.14.0
-```
-
-Add output to ~/.zshrc file:
-
-```bash
-export PATH="$HOME/.nvm/versions/node/v22.14.0/bin:$PATH"
+use-node-version=22.15.0
 ```
 
 ## Global npm packages
