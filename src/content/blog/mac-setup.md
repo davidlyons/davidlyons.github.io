@@ -2,6 +2,7 @@
 title: 'Mac Setup'
 description: 'Recommended apps and settings'
 pubDate: 'Feb 22 2025'
+updatedDate: 'May 13 2025'
 cover: './macbook.jpg'
 coverAlt: 'MacBook Pro'
 # Kbd Generator https://kbd.hsuan.xyz
@@ -167,6 +168,12 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ```bash
 brew install git gh
+```
+
+Or download Brewfile and run from same directory:
+
+```bash
+brew bundle install
 ```
 
 Set your name and email and add `git uncommit` alias shortcut, updates ~/.gitconfig

@@ -36,16 +36,18 @@ const { title, description, pubDate, updatedDate, cover, coverAlt } = Astro.prop
       prose-inline-code:font-medium mx-auto"
   >
     <div class="text-center">
-      <div class="mb-2 opacity-60">
-        <FormattedDate date={pubDate} />
+      <div class="mb-3">
+        <div class="opacity-60">
+          <FormattedDate date={pubDate} />
+        </div>
+        {
+          updatedDate && (
+            <div class="text-sm opacity-40">
+              Last updated: <FormattedDate date={updatedDate} />
+            </div>
+          )
+        }
       </div>
-      {
-        updatedDate && (
-          <div class="last-updated-on">
-            Last updated on <FormattedDate date={updatedDate} />
-          </div>
-        )
-      }
       <h1
         class="mb-11 border-b border-neutral-300 pb-8 text-5xl font-medium dark:border-neutral-700 dark:text-white"
       >
