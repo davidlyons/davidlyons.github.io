@@ -14,9 +14,9 @@ const finalTitle = title ? `${title} | ${SITE_TITLE}` : `${SITE_TITLE}`;
   <head>
     <BaseHead title={finalTitle} description={description} image={image} />
   </head>
-  <body class="bg-neutral-200 dark:bg-neutral-950 dark:text-neutral-300">
+  <body class="flex min-h-screen flex-col bg-neutral-200 dark:bg-neutral-950 dark:text-neutral-300">
     <Header />
-    <section class="bg-neutral-100 dark:bg-neutral-900">
+    <section class="grow bg-neutral-100 dark:bg-neutral-900">
       <div class="py-12">
         <div class="container">
           <slot />
