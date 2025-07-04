@@ -21,19 +21,19 @@
     "@iconify-json/file-icons": "^1.2.1",
     "@iconify-json/skill-icons": "^1.2.0",
     "@iconify-json/vscode-icons": "^1.2.23",
-    "astro": "^5.10.1",
+    "astro": "^5.11.0",
     "astro-icon": "^1.1.5",
     "sharp": "^0.34.2",
     "typescript": "^5.8.3"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.1.10",
-    "prettier": "^3.6.0",
+    "@tailwindcss/vite": "^4.1.11",
+    "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-classnames": "^0.7.9",
-    "prettier-plugin-merge": "^0.7.4",
+    "prettier-plugin-classnames": "^0.8.1",
+    "prettier-plugin-merge": "^0.8.0",
     "prettier-plugin-tailwindcss": "^0.6.13",
-    "tailwindcss": "^4.1.10"
+    "tailwindcss": "^4.1.11"
   }
 }
