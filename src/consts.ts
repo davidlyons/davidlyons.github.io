@@ -16,6 +16,8 @@ export const iconMap: iconMapType = {
   SCSS: 'skill-icons:sass',
   Blender: 'skill-icons:blender-dark',
   Bootstrap: 'skill-icons:bootstrap',
+  JavaScript: 'devicon:javascript',
+  TypeScript: 'skill-icons:typescript',
   'shadcn/ui': 'tags/shadcnui',
   'Next.js': 'devicon:nextjs',
   Tailwind: 'devicon:tailwindcss',
