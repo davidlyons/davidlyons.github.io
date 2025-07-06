@@ -1,7 +1,7 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 // import HeaderCanvas from './HeaderCanvas.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
+import { SITE_TITLE } from '@/consts';
 ---
 
 <header>
@@ -10,15 +10,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
     <div class="relative container flex flex-col items-center sm:flex-row">
       <div class="mb-4 leading-[1.2] sm:me-4 sm:mb-0">
         <a
-          class="font-display text-[27px] text-black uppercase hover:text-black dark:text-white dark:hover:text-white"
+          class="font-display text-[27px] text-black uppercase hover:text-black dark:text-white
+            dark:hover:text-white"
           href="/"
         >
           {SITE_TITLE}
         </a>
-        <div class="text-xs tracking-wide opacity-60">{SITE_DESCRIPTION}</div>
+        <!-- <div class="text-xs tracking-wide opacity-60">{SITE_DESCRIPTION}</div> -->
       </div>
-      <ul class="flex sm:ms-auto lg:mb-0">
-        <HeaderLink href="/">Work</HeaderLink>
+      <ul class="flex flex-wrap justify-center sm:ms-auto lg:mb-0">
+        <HeaderLink href="/">3D Art</HeaderLink>
+        <HeaderLink href="/frontend">Front End</HeaderLink>
         <HeaderLink href="/about">About</HeaderLink>
         <HeaderLink href="/resume">Resume</HeaderLink>
         <!-- <HeaderLink href="/blog">Blog</HeaderLink> -->

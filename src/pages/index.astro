@@ -4,9 +4,9 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import PortfolioPreview from '@/components/PortfolioPreview.astro';
 import { SITE_DESCRIPTION } from '@/consts';
 
-const projects = (await getCollection('work')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const projects = (await getCollection('work'))
+  .filter((project) => project.data.category !== 'frontend')
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <BaseLayout title={SITE_DESCRIPTION}>

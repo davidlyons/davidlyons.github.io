@@ -12,12 +12,12 @@ type iconMapType = {
 export const iconMap: iconMapType = {
   '3D Modeling': 'file-icons:3d-model',
   React: 'devicon:react',
-  // 'Three.js': 'skill-icons:threejs-light',
   'Three.js': 'tags/threejs',
   SCSS: 'skill-icons:sass',
   Blender: 'skill-icons:blender-dark',
   Bootstrap: 'skill-icons:bootstrap',
   'shadcn/ui': 'tags/shadcnui',
+  'Next.js': 'devicon:nextjs',
   Tailwind: 'devicon:tailwindcss',
   Maya: 'devicon:maya',
   Photoshop: 'skill-icons:photoshop',

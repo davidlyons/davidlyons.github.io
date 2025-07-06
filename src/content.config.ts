@@ -23,6 +23,7 @@ const work = defineCollection({
     title: z.string(),
     description: z.string().optional(),
     pubDate: z.coerce.date(),
+    category: z.string().optional(),
     tags: z.array(z.string()),
     img: z.string(),
     img_alt: z.string().optional(),
