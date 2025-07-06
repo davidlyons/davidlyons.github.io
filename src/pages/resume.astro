@@ -62,10 +62,10 @@ const experience: experienceType[] = [
     <h1 class="mb-0 text-3xl font-light dark:text-white">Resume</h1>
     <div>
       <a
-        class="inline-flex items-center rounded border border-current px-3 py-1 text-center text-[13px]
-          text-indigo-700 transition-colors hover:border-indigo-700 hover:bg-indigo-700 hover:text-white
-          dark:border-neutral-500 dark:text-neutral-300 dark:hover:border-neutral-200
-          dark:hover:bg-transparent dark:hover:text-white"
+        class="inline-flex items-center rounded border border-current px-3 py-1 text-center
+          text-[13px] text-indigo-700 transition-colors hover:border-indigo-700 hover:bg-indigo-700
+          hover:text-white dark:border-neutral-500 dark:text-neutral-300
+          dark:hover:border-neutral-200 dark:hover:bg-transparent dark:hover:text-white"
         href="/David-Lyons-Resume-2025.pdf"
         title="Download David Lyons Resume PDF"
         download
@@ -93,6 +93,7 @@ const experience: experienceType[] = [
 
             <h2 class="mb-3">Skills</h2>
             <ul class="list-none">
+              <li>Front End Web Dev</li>
               <li>Responsive Web Design</li>
               <li>Photo Editing</li>
               <li>Video Editing</li>
@@ -125,6 +126,7 @@ const experience: experienceType[] = [
               <li><Icon name="skill-icons:webpack-dark" />Webpack</li>
               <li><Icon name="devicon:vscode" />Visual Studio Code</li>
               <li><Icon name="devicon:chrome" />Chrome DevTools</li>
+              <li><Icon name="devicon:nodejs" />Node.js</li>
               <li><Icon name="devicon:npm" />npm</li>
               <li><Icon name="devicon:git" />Git</li>
               <!-- <li><Icon name="skill-icons:gatsby" />Gatsby</li> -->
@@ -189,8 +191,14 @@ const experience: experienceType[] = [
 
         <div>
           <div class="font-medium">The University of Texas at Dallas</div>
-          <div class="text-sm font-light opacity-60">
-            Spring 2010 semester away in the Arts and Technology department
+          <div class="text-sm font-light dark:text-neutral-300/60">
+            Spring 2010 semester in <a
+              href="https://bass.utdallas.edu/programs/animation-games/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Arts and Technology
+            </a>
           </div>
         </div>
       </div>
