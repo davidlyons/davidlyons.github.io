@@ -23,6 +23,7 @@ export const iconMap: iconMapType = {
   Tailwind: 'devicon:tailwindcss',
   Maya: 'devicon:maya',
   Photoshop: 'skill-icons:photoshop',
+  SVG: 'tags/svg-logo',
   Vite: 'devicon:vitejs',
   ZBrush: 'file-icons:zbrush',
   'Material UI': 'skill-icons:materialui-dark',
