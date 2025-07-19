@@ -1,0 +1,48 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import FormattedDate from '@/components/FormattedDate.astro';
+
+const posts = await getCollection('blog', ({ data }) =>
+  // Filter out content entries with `draft: true` only when building for production
+  import.meta.env.PROD ? data.draft !== true : true
+);
+posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout>
+  <div class="mx-auto max-w-screen-md">
+    {
+      posts.length > 0 ? (
+        <div class="grid grid-cols-2 gap-6">
+          {posts.map((post, i) => (
+            <div class={i == 0 ? 'col-span-2 mb-7 text-center' : 'col-span-2 mb-7 md:col-span-1'}>
+              <a
+                href={`/blog/${post.id}/`}
+                class="transition-colors dark:text-white/80 dark:hover:text-white"
+              >
+                {post.data.cover && (
+                  <Image
+                    class="mb-4 aspect-2/1 rounded-2xl object-cover"
+                    width={1536}
+                    height={768}
+                    src={post.data.cover}
+                    alt={post.data.coverAlt || ''}
+                    quality={90}
+                  />
+                )}
+                <h3 class="mb-1 text-3xl font-medium">{post.data.title}</h3>
+                <p class="mb-0 opacity-50">
+                  <FormattedDate date={post.data.pubDate} />
+                </p>
+              </a>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div class="text-center text-2xl">No published posts.</div>
+      )
+    }
+  </div>
+</BaseLayout>
