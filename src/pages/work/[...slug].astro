@@ -22,12 +22,43 @@ type Props = CollectionEntry<'work'>;
 const entry = Astro.props;
 const { title, description, pubDate, tags } = entry.data;
 const { Content } = await render(entry);
+
+// Get all entries in current category for prev/next arrow navigation
+const projects = (await getCollection('work'))
+  .filter((project) => project.data.category === entry.data.category)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const currentIndex = projects.findIndex((item) => item.id === entry.id);
+const prevEntry = projects[currentIndex - 1];
+const nextEntry = projects[currentIndex + 1];
 ---
 
 <BaseLayout {...entry.data}>
   <div class="grid-cols-12 lg:grid">
     <div class="col-span-3">
       <div class="sticky top-12">
+        <!-- Previous / Next arrows -->
+        <div class="mb-6 flex gap-4">
+          {
+            prevEntry && (
+              <a
+                href={`/work/${prevEntry.id}`}
+                aria-label="Previous"
+                class="px-3 py-2 dark:text-white"
+              >
+                <Icon name="arrow-left" size={20} />
+              </a>
+            )
+          }
+          {
+            nextEntry && (
+              <a href={`/work/${nextEntry.id}`} aria-label="Next" class="px-3 py-2 dark:text-white">
+                <Icon name="arrow-right" size={20} />
+              </a>
+            )
+          }
+        </div>
+
         <h1 class="mb-1 text-4xl font-medium dark:text-white">{title}</h1>
         <p class="opacity-60">
           <FormattedDate date={pubDate} />
