@@ -2,7 +2,7 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE = 'David Lyons';
-export const SITE_DESCRIPTION = '3D Artist, UX Design Engineer';
+export const SITE_DESCRIPTION = '3D Artist, Front End Web Dev, Design Engineer';
 
 // https://icon-sets.iconify.design
 type iconMapType = {
@@ -21,6 +21,7 @@ export const iconMap: iconMapType = {
   'shadcn/ui': 'tags/shadcnui',
   'Next.js': 'devicon:nextjs',
   Tailwind: 'devicon:tailwindcss',
+  GraphQL: 'skill-icons:graphql-light',
   Maya: 'devicon:maya',
   Photoshop: 'skill-icons:photoshop',
   SVG: 'tags/svg-logo',
