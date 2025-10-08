@@ -22,7 +22,7 @@ export const iconMap: iconMapType = {
   Photoshop: 'skill-icons:photoshop',
   React: 'devicon:react',
   SCSS: 'skill-icons:sass',
-  'shadcn/ui': 'tags/shadcnui',
+  'shadcn/ui': 'vscode-icons:file-type-shadcn',
   SVG: 'tags/svg-logo',
   Storybook: 'vscode-icons:file-type-storybook',
   Tailwind: 'devicon:tailwindcss',
