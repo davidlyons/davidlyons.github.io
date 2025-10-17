@@ -5,7 +5,7 @@ import { Icon } from 'astro-icon/components';
 type experienceType = {
   company: string;
   contract?: boolean;
-  url: string;
+  url?: string;
   title: string;
   start: string;
   end: string;
@@ -14,11 +14,18 @@ type experienceType = {
 
 const experience: experienceType[] = [
   {
+    company: 'Freelance',
+    title: 'Front End Web + 3D Web Developer',
+    start: 'Sept 2025',
+    end: 'Present',
+    location: 'Los Angeles, CA',
+  },
+  {
     company: 'BP',
     url: 'https://www.bp.com/',
     title: 'Senior Design Engineer',
     start: 'May 2020',
-    end: 'Present',
+    end: 'Aug 2025',
     location: 'Los Angeles, CA',
   },
   {
@@ -152,16 +159,20 @@ const experience: experienceType[] = [
       </div>
 
       <div class="lg:col-span-7 lg:col-start-6">
-        <h2 class="mb-4">Work Experience</h2>
+        <h2 class="mb-5">Work Experience</h2>
 
-        <div class="mb-12 space-y-4">
+        <div class="mb-12 space-y-5">
           {
             experience.map(({ company, url, contract, title, start, end, location }) => (
               <div>
                 <div class="font-medium">
-                  <a href={url} target="_blank" rel="noreferrer">
-                    {company}
-                  </a>
+                  {url ? (
+                    <a href={url} target="_blank" rel="noreferrer">
+                      {company}
+                    </a>
+                  ) : (
+                    company
+                  )}
                   {contract && <span class="opacity-60">• Contract</span>}
                 </div>
                 <div>{title}</div>
@@ -171,9 +182,9 @@ const experience: experienceType[] = [
           }
         </div>
 
-        <h2 class="mb-4">Education</h2>
+        <h2 class="mb-5">Education</h2>
 
-        <div class="mb-4">
+        <div class="mb-5">
           <div class="font-medium">Texas A&M University</div>
           <div>
             Bachelor of Science in <a
@@ -183,7 +194,9 @@ const experience: experienceType[] = [
               class="font-medium"
             >
               Visualization
-            </a>, Dec 2010
+            </a>
+            <Icon name="diploma" class="mx-1" />
+            Dec 2010
           </div>
           <div class="text-sm font-light opacity-60">
             Fall 2007 - Fall 2010 • College Station, TX

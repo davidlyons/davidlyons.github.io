@@ -28,7 +28,7 @@ const projects = (await getCollection('work'))
   .filter((project) => project.data.category === entry.data.category)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const currentIndex = projects.findIndex((item) => item.id === entry.id);
+const currentIndex = projects.findIndex(({ id }) => id === entry.id);
 const prevEntry = projects[(currentIndex - 1 + projects.length) % projects.length];
 const nextEntry = projects[(currentIndex + 1) % projects.length];
 ---
