@@ -5,7 +5,7 @@ import PortfolioPreview from '@/components/PortfolioPreview.astro';
 import { SITE_DESCRIPTION } from '@/consts';
 
 const projects = (await getCollection('work'))
-  .filter((project) => project.data.category === 'frontend')
+  .filter(({ data }) => data.category === 'frontend')
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
