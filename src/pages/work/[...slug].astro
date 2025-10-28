@@ -24,9 +24,17 @@ const { title, description, pubDate, tags } = entry.data;
 const { Content } = await render(entry);
 
 // Get all entries in current category for prev/next arrow navigation
-const projects = (await getCollection('work'))
-  .filter((project) => project.data.category === entry.data.category)
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const projects = await getCollection('work');
+
+projects.sort((a, b) => {
+  // ascending by order
+  if (a.data.order || b.data.order) {
+    return (a.data.order || projects.length) - (b.data.order || projects.length);
+  }
+
+  // descending by published date
+  return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+});
 
 const currentIndex = projects.findIndex(({ id }) => id === entry.id);
 const prevEntry = projects[(currentIndex - 1 + projects.length) % projects.length];
@@ -44,7 +52,8 @@ const nextEntry = projects[(currentIndex + 1) % projects.length];
               <a
                 href={`/work/${prevEntry.id}`}
                 aria-label="Previous"
-                class="py-1 pr-3 pl-1 opacity-60 transition-opacity hover:opacity-100 dark:text-white"
+                class="py-1 pr-3 pl-1 opacity-60 transition-opacity hover:opacity-100
+                  dark:text-white"
               >
                 <Icon name="arrow-left" size={20} />
               </a>
@@ -78,7 +87,10 @@ const nextEntry = projects[(currentIndex + 1) % projects.length];
           {
             tags.map((tag) => (
               <li class="leading-none">
-                <span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium dark:bg-gray-600 dark:text-white">
+                <span
+                  class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium
+                    dark:bg-gray-600 dark:text-white"
+                >
                   {iconMap[tag] && <Icon name={iconMap[tag]} size={16} class="me-2" />} {tag}
                 </span>
               </li>

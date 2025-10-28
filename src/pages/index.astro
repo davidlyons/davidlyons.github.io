@@ -4,13 +4,21 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import PortfolioPreview from '@/components/PortfolioPreview.astro';
 import { SITE_DESCRIPTION } from '@/consts';
 
-const projects = (await getCollection('work'))
-  .filter((project) => project.data.category !== 'frontend')
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const projects = await getCollection('work');
+
+projects.sort((a, b) => {
+  // ascending by order
+  if (a.data.order || b.data.order) {
+    return (a.data.order || projects.length) - (b.data.order || projects.length);
+  }
+
+  // descending by published date
+  return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+});
 ---
 
 <BaseLayout title={SITE_DESCRIPTION}>
-  <div class="grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+  <div class="grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
     {projects.map((project) => <PortfolioPreview project={project} />)}
   </div>
 </BaseLayout>

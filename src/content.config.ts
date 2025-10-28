@@ -27,6 +27,7 @@ const work = defineCollection({
     tags: z.array(z.string()),
     img: z.string(),
     img_alt: z.string().optional(),
+    order: z.number().optional(),
   }),
 });
 
