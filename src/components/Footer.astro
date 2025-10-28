@@ -7,8 +7,8 @@ import SocialLink from './SocialLink.astro';
   <div class="relative container items-center sm:flex sm:justify-between">
     <a
       href="mailto:david@davidlyons.dev"
-      class="inline-flex items-center text-sm text-neutral-500 transition-colors hover:text-neutral-700
-        dark:text-neutral-300/60 dark:hover:text-neutral-300/80"
+      class="inline-flex items-center text-sm text-neutral-500 transition-colors
+        hover:text-neutral-700 dark:text-neutral-300/60 dark:hover:text-neutral-300/80"
     >
       <Icon name="envelope" size={16} class="me-2" />
       david@davidlyons.dev
@@ -39,7 +39,7 @@ import SocialLink from './SocialLink.astro';
         type="application/rss+xml"
       />
     </div>
-    <div class="top-1/2 left-1/2 text-sm sm:absolute sm:-translate-x-1/2 sm:-translate-y-1/2">
+    <div class="top-1/2 left-1/2 text-sm sm:absolute sm:-translate-1/2">
       &copy; {new Date().getFullYear()} David Lyons
     </div>
   </div>

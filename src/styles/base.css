@@ -1,6 +1,6 @@
 /* https://tailwindcss.com/docs/detecting-classes-in-source-files#setting-your-base-path */
 @import 'tailwindcss' source('../../src');
-@plugin "@tailwindcss/typography";
+@plugin '@tailwindcss/typography';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
