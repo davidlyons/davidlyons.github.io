@@ -27,6 +27,7 @@ export const iconMap: iconMapType = {
   Storybook: 'vscode-icons:file-type-storybook',
   Tailwind: 'devicon:tailwindcss',
   'Three.js': 'tags/threejs',
+  'Tone.js': 'tags/tonejs',
   TypeScript: 'skill-icons:typescript',
   Vite: 'devicon:vitejs',
   ZBrush: 'file-icons:zbrush',
