@@ -10,7 +10,6 @@ type iconMapType = {
 };
 
 export const iconMap: iconMapType = {
-  '3D Modeling': 'file-icons:3d-model',
   Blender: 'skill-icons:blender-dark',
   Bootstrap: 'skill-icons:bootstrap',
   GraphQL: 'skill-icons:graphql-light',
@@ -30,5 +29,5 @@ export const iconMap: iconMapType = {
   'Tone.js': 'tags/tonejs',
   TypeScript: 'skill-icons:typescript',
   Vite: 'devicon:vitejs',
-  ZBrush: 'file-icons:zbrush',
+  ZBrush: 'tags/zbrush',
 };
