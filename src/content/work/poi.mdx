@@ -19,13 +19,22 @@ order: 1
 
 <Iframe src="https://flowarts.xyz" aspect="retro" />
 
-For each stick, a rectangle is extruded along a curve created with a parametric equation:
+To create the fading trail, for each stick, a rectangle is extruded along a curve with a parametric
+equation:
 
 ```js
-x = cos(time * handTurns) * armLength + cos(time * poiTurns) * poiLength * (startOut ? 1 : -1);
-y = sin(time * handTurns) * armLength + sin(time * poiTurns) * poiLength * (startOut ? 1 : -1);
+x = cos(angle * handTurns) * armLength + cos(angle * poiTurns) * poiLength * (startOut ? 1 : -1);
+y = sin(angle * handTurns) * armLength + sin(angle * poiTurns) * poiLength * (startOut ? 1 : -1);
 ```
 
-Where `time` is the angle in radians between `0` and `2π`
+Where `angle` is in radians between `0` and `2π`
+
+The extruded geometry's UVs are programmatically placed in a straight, horizontal row. The UVs slide
+along the X axis with time in the vertex shader. The UVs are then passed to the fragment shader
+where they drive the alpha with a smoothstep repeating on the X axis:
+
+```glsl
+float alpha = smoothstep(0.75, 1.0, mod(dir * vUv.x, 1.0));
+```
 
 <YouTube id="zQPcupoacjM" />
