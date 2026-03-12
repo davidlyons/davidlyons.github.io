@@ -1,10 +1,7 @@
 ---
+import { Font } from 'astro:assets';
 import { ClientRouter } from 'astro:transitions';
 import { SITE_TITLE } from '@/consts';
-
-// https://docs.astro.build/en/guides/fonts/#using-fontsource
-import '@fontsource-variable/inter';
-import '@fontsource/rubik/700.css';
 
 // Import the global.css file here so that it is included on all pages through the use of the <BaseHead /> component.
 import '../styles/base.css';
@@ -21,6 +18,10 @@ const { title, description, image = '/site-thumb.png' } = Astro.props;
 
 const GA_ID = import.meta.env.PUBLIC_GA_ID!;
 ---
+
+<!-- https://docs.astro.build/en/guides/fonts/#using-fontsource -->
+<Font cssVariable="--font-inter" preload />
+<Font cssVariable="--font-rubik" preload />
 
 <!-- Google tag (gtag.js) -->
 <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>

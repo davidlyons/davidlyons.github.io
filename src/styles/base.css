@@ -8,14 +8,16 @@
 @custom-variant prose-inline-code (&.prose :where(:not(pre)>code):not(:where([class~="not-prose"] *)));
 
 @theme {
-  --font-display: 'Rubik', sans-serif;
-  --font-sans: 'Inter Variable', sans-serif;
-
   /* 15 / 16 */
   --text-base: 0.9375rem;
   --text-base--line-height: 1.7;
 
   --aspect-retro: 4 / 3;
+}
+
+@theme inline {
+  --font-display: var(--font-rubik);
+  --font-sans: var(--font-inter);
 }
 
 @utility container {

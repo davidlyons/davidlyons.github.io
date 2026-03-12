@@ -20,12 +20,6 @@ importers:
       '@astrojs/sitemap':
         specifier: ^3.7.1
         version: 3.7.1
-      '@fontsource-variable/inter':
-        specifier: ^5.2.8
-        version: 5.2.8
-      '@fontsource/rubik':
-        specifier: ^5.2.8
-        version: 5.2.8
       '@iconify-json/devicon':
         specifier: ^1.2.60
         version: 1.2.60
@@ -343,12 +337,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
-
-  '@fontsource-variable/inter@5.2.8':
-    resolution: {integrity: sha512-kOfP2D+ykbcX/P3IFnokOhVRNoTozo5/JxhAIVYLpea/UBmCQ/YWPBfWIDuBImXX/15KH+eKh4xpEUyS2sQQGQ==}
-
-  '@fontsource/rubik@5.2.8':
-    resolution: {integrity: sha512-PIc8QR7FqWPcYhbdRiGff56vQlKqg/ytES1YqecSq1GkgxiH4TBshrFvDEOZ9JonUF9m1qQ+qXxJj7wD5zgXEw==}
 
   '@iconify-json/devicon@1.2.60':
     resolution: {integrity: sha512-cGtHMHsp2fY3xyK3Wslq4WNwhKmTfqo/ZPzqBJYXVK+3lnX1lv3iXMq2xRA2MJZv37zPVAXeV0F2o7kHPbQHXQ==}
@@ -2947,10 +2935,6 @@ snapshots:
 
   '@esbuild/win32-x64@0.27.3':
     optional: true
-
-  '@fontsource-variable/inter@5.2.8': {}
-
-  '@fontsource/rubik@5.2.8': {}
 
   '@iconify-json/devicon@1.2.60':
     dependencies:

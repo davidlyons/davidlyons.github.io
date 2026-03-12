@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import icon from 'astro-icon';
@@ -12,6 +12,22 @@ export default defineConfig({
   vite: { plugins: [tailwindcss()] },
   integrations: [mdx(), sitemap(), icon()],
   compressHTML: false,
+  fonts: [
+    {
+      provider: fontProviders.fontsource(),
+      name: 'Inter',
+      cssVariable: '--font-inter',
+      weights: ['100 900'],
+      styles: ['normal'],
+    },
+    {
+      provider: fontProviders.fontsource(),
+      name: 'Rubik',
+      cssVariable: '--font-rubik',
+      weights: [700],
+      styles: ['normal'],
+    },
+  ],
   markdown: {
     shikiConfig: {
       theme: 'one-dark-pro', // https://shiki.style/themes
