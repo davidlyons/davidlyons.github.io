@@ -5,6 +5,7 @@ import { Icon } from 'astro-icon/components';
 type experienceType = {
   company: string;
   contract?: boolean;
+  remote?: boolean;
   url?: string;
   title: string;
   start: string;
@@ -27,6 +28,7 @@ const experience: experienceType[] = [
     start: 'May 2020',
     end: 'Aug 2025',
     location: 'Los Angeles, CA',
+    remote: true,
   },
   {
     company: 'Object Edge',
@@ -36,6 +38,7 @@ const experience: experienceType[] = [
     start: 'Feb 2019',
     end: 'Jan 2020',
     location: 'Los Angeles, CA',
+    remote: true,
   },
   {
     company: 'WITHIN',
@@ -167,7 +170,7 @@ const experience: experienceType[] = [
 
         <div class="mb-12 space-y-5">
           {
-            experience.map(({ company, url, contract, title, start, end, location }) => (
+            experience.map(({ company, url, contract, title, start, end, location, remote }) => (
               <div>
                 <div class="font-medium">
                   {url ? (
@@ -177,10 +180,12 @@ const experience: experienceType[] = [
                   ) : (
                     company
                   )}
-                  {contract && <span class="opacity-60">• Contract</span>}
+                  {contract && <span class="opacity-60"> • Contract</span>}
                 </div>
                 <div>{title}</div>
-                <div class="text-sm font-light opacity-60">{`${start} – ${end} • ${location}`}</div>
+                <div class="text-sm font-light opacity-60">
+                  {[`${start} – ${end}`, location, ...(remote ? ['Remote'] : [])].join(' • ')}
+                </div>
               </div>
             ))
           }
