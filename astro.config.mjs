@@ -30,7 +30,7 @@ export default defineConfig({
   ],
   markdown: {
     shikiConfig: {
-      theme: 'one-dark-pro', // https://shiki.style/themes
+      theme: 'tokyo-night', // https://shiki.style/themes
       // remove trailing empty line from <pre> code blocks
       // https://github.com/shikijs/shiki/issues/3#issuecomment-2272168959
       transformers: [
