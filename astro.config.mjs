@@ -48,6 +48,6 @@ export default defineConfig({
   },
   // https://docs.astro.build/en/reference/experimental-flags/svg-optimization/
   // experimental: {
-  //   svgo: true,
+  //   svgOptimizer:  svgoOptimizer(),
   // },
 });
