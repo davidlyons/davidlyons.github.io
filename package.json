@@ -13,25 +13,25 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
-    "@astrojs/mdx": "^5.0.4",
+    "@astrojs/mdx": "^5.0.6",
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.2",
     "@iconify-json/devicon": "^1.2.62",
     "@iconify-json/skill-icons": "^1.2.4",
-    "@iconify-json/vscode-icons": "^1.2.47",
-    "astro": "^6.2.1",
+    "@iconify-json/vscode-icons": "^1.2.50",
+    "astro": "^6.3.5",
     "astro-icon": "^1.1.5",
     "sharp": "^0.34.5",
     "typescript": "^6.0.3"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.2.4",
+    "@tailwindcss/vite": "^4.3.0",
     "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-classnames": "^0.10.1",
     "prettier-plugin-merge": "^0.10.1",
     "prettier-plugin-tailwindcss": "^0.8.0",
-    "tailwindcss": "^4.2.4"
+    "tailwindcss": "^4.3.0"
   }
 }
