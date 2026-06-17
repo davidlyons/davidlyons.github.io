@@ -3,3 +3,4 @@ allowBuilds:
   sharp: true
 minimumReleaseAgeExclude:
   - '@iconify-json/vscode-icons@1.2.50'
+  - astro@6.4.8

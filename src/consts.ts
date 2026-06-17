@@ -10,18 +10,21 @@ type iconMapType = {
 };
 
 export const iconMap: iconMapType = {
-  Blender: 'skill-icons:blender-dark',
+  Affinity: 'vscode-icons:file-type-affinity',
+  'Base UI': 'tags/baseui',
+  Blender: 'tags/blender',
   Bootstrap: 'skill-icons:bootstrap',
   GraphQL: 'skill-icons:graphql-light',
   JavaScript: 'devicon:javascript',
   'Material UI': 'skill-icons:materialui-dark',
   Maya: 'devicon:maya',
   'Next.js': 'devicon:nextjs',
-  Painting: 'tags/palette',
+  Paint: 'tags/palette',
   Photoshop: 'skill-icons:photoshop',
   React: 'devicon:react',
+  'React Three Fiber': 'devicon:react',
   SCSS: 'skill-icons:sass',
-  'shadcn/ui': 'vscode-icons:file-type-shadcn',
+  Shadcn: 'vscode-icons:file-type-shadcn',
   SVG: 'tags/svg-logo',
   Storybook: 'vscode-icons:file-type-storybook',
   Tailwind: 'devicon:tailwindcss',
@@ -30,4 +33,5 @@ export const iconMap: iconMapType = {
   TypeScript: 'skill-icons:typescript',
   Vite: 'devicon:vitejs',
   ZBrush: 'tags/zbrush',
+  Zustand: 'devicon:zustand',
 };
