@@ -6,7 +6,7 @@ img_alt: Split time same direction antispin flower
 description:
   Poi / glowstick flower pattern visualizer to explore how string length affects the flower shape,
   the relative timing and direction of two sticks moving through the flower shapes, and the number
-  of object rotations per hand rotation to create different numbers of in-spin and anti-spin petals.
+  of object rotations per arm rotation to create different numbers of in-spin and anti-spin petals.
 tags:
   - Three.js
   - React
@@ -22,8 +22,8 @@ To create the fading trail, for each stick, a rectangle is extruded along a curv
 equation:
 
 ```js
-x = cos(angle * handTurns) * armLength + cos(angle * poiTurns) * poiLength * (startOut ? 1 : -1);
-y = sin(angle * handTurns) * armLength + sin(angle * poiTurns) * poiLength * (startOut ? 1 : -1);
+x = cos(angle * armTurns) * armLength + cos(angle * poiTurns) * poiLength * (startOut ? 1 : -1);
+y = sin(angle * armTurns) * armLength + sin(angle * poiTurns) * poiLength * (startOut ? 1 : -1);
 ```
 
 Where `angle` is in radians between `0` and `2π`
