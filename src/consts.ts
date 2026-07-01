@@ -36,4 +36,5 @@ export const iconMap: iconMapType = {
   Vite: 'devicon:vitejs',
   ZBrush: 'tags/zbrush',
   Zustand: 'devicon:zustand',
+  Zod: 'tags/zod',
 };
