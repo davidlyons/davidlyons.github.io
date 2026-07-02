@@ -11,12 +11,12 @@ type iconMapType = {
 
 export const iconMap: iconMapType = {
   Affinity: 'vscode-icons:file-type-affinity',
-  'Base UI': 'tags/baseui',
+  'Base UI': 'simple-icons:baseui',
   Blender: 'tags/blender',
   Bootstrap: 'skill-icons:bootstrap',
   GraphQL: 'skill-icons:graphql-light',
   JavaScript: 'devicon:javascript',
-  Lucide: 'tags/lucide',
+  Lucide: 'simple-icons:lucide',
   'Material UI': 'skill-icons:materialui-dark',
   Maya: 'devicon:maya',
   'Next.js': 'devicon:nextjs',
@@ -36,5 +36,5 @@ export const iconMap: iconMapType = {
   Vite: 'devicon:vitejs',
   ZBrush: 'tags/zbrush',
   Zustand: 'devicon:zustand',
-  Zod: 'tags/zod',
+  Zod: 'simple-icons:zod',
 };
