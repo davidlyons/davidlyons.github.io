@@ -23,6 +23,7 @@ export const iconMap: iconMapType = {
   'Node.js': 'devicon:nodejs',
   Paint: 'tags/palette',
   Photoshop: 'skill-icons:photoshop',
+  'Radix UI': 'simple-icons:radixui',
   React: 'devicon:react',
   'React Three Fiber': 'devicon:react',
   SCSS: 'skill-icons:sass',
