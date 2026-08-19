@@ -4,7 +4,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import PortfolioPreview from '@/components/PortfolioPreview.astro';
 import { SITE_DESCRIPTION } from '@/consts';
 
-const projects = await getCollection('work');
+const projects = (await getCollection('work')).filter(({ data }) => data.hide !== true);
 
 projects.sort((a, b) => {
   // ascending by order

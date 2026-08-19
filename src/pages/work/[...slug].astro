@@ -24,7 +24,7 @@ const { title, description, pubDate, tags } = entry.data;
 const { Content } = await render(entry);
 
 // Get all entries in current category for prev/next arrow navigation
-const projects = await getCollection('work');
+const projects = (await getCollection('work')).filter(({ data }) => data.hide !== true);
 
 projects.sort((a, b) => {
   // ascending by order
@@ -46,34 +46,34 @@ const nextEntry = projects[(currentIndex + 1) % projects.length];
     <div class="col-span-3">
       <div class="sticky top-12">
         <!-- Previous / Next arrows -->
-        <div class="mb-7 flex items-center gap-2">
-          {
-            prevEntry && (
-              <a
-                href={`/work/${prevEntry.id}`}
-                aria-label="Previous"
-                class="py-1 pr-3 pl-1 opacity-60 transition-opacity hover:opacity-100
-                  dark:text-white"
-              >
-                <Icon name="arrow-left" size={20} />
-              </a>
-            )
-          }
-          <span class="w-12 text-center opacity-60">
-            {`${currentIndex + 1} / ${projects.length}`}
-          </span>
-          {
-            nextEntry && (
-              <a
-                href={`/work/${nextEntry.id}`}
-                aria-label="Next"
-                class="px-3 py-1 opacity-60 transition-opacity hover:opacity-100 dark:text-white"
-              >
-                <Icon name="arrow-right" size={20} />
-              </a>
-            )
-          }
-        </div>
+        {
+          !entry.data.hide && (
+            <div class="mb-7 flex items-center gap-2">
+              {prevEntry && (
+                <a
+                  href={`/work/${prevEntry.id}`}
+                  aria-label="Previous"
+                  class="py-1 pr-3 pl-1 opacity-60 transition-opacity hover:opacity-100
+                    dark:text-white"
+                >
+                  <Icon name="arrow-left" size={20} />
+                </a>
+              )}
+              <span class="w-12 text-center opacity-60">
+                {`${currentIndex + 1} / ${projects.length}`}
+              </span>
+              {nextEntry && (
+                <a
+                  href={`/work/${nextEntry.id}`}
+                  aria-label="Next"
+                  class="px-3 py-1 opacity-60 transition-opacity hover:opacity-100 dark:text-white"
+                >
+                  <Icon name="arrow-right" size={20} />
+                </a>
+              )}
+            </div>
+          )
+        }
 
         <h1 class="mb-1 text-3xl dark:text-white">{title}</h1>
         <p class="opacity-60">

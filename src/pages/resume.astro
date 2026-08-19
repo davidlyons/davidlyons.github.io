@@ -23,7 +23,8 @@ const experience: experienceType[] = [
   },
   {
     company: 'BP',
-    url: 'https://www.bp.com/',
+    // url: 'https://www.bp.com/',
+    url: '/work/bp-pulse',
     title: 'Senior Design Engineer',
     start: 'May 2020',
     end: 'Aug 2025',
@@ -33,7 +34,8 @@ const experience: experienceType[] = [
   {
     company: 'Object Edge',
     contract: true,
-    url: 'https://www.objectedge.com/',
+    // url: 'https://www.objectedge.com/',
+    url: '/work/moto',
     title: 'Front End Web + 3D Web Developer',
     start: 'Feb 2019',
     end: 'Jan 2020',
@@ -42,7 +44,8 @@ const experience: experienceType[] = [
   },
   {
     company: 'WITHIN',
-    url: 'https://www.with.in/',
+    // url: 'https://www.with.in/',
+    url: '/work/within',
     title: 'WebVR Software Engineer',
     start: 'Nov 2015',
     end: 'Aug 2018',
@@ -50,7 +53,8 @@ const experience: experienceType[] = [
   },
   {
     company: 'Slingshot',
-    url: 'https://www.slingshot.com/',
+    // url: 'https://www.slingshot.com/',
+    url: '/work/borden',
     title: 'Front End Web Developer',
     start: 'Mar 2013',
     end: 'Nov 2015',
@@ -58,7 +62,8 @@ const experience: experienceType[] = [
   },
   {
     company: 'TRG / Click Here Labs',
-    url: 'https://clickherelabs.com/',
+    // url: 'https://clickherelabs.com/',
+    url: 'https://davidlyons.bitbucket.io/chuckecheese/templates/parallax.html',
     title: 'Front End Web Developer',
     start: 'Mar 2012',
     end: 'Mar 2013',
@@ -101,6 +106,13 @@ const experience: experienceType[] = [
               <li><Icon name="terminal" />Command Line</li>
             </ul>
 
+            <h2 class="mb-3">3D DCC Tools</h2>
+            <ul class="mb-9 list-none">
+              <li><Icon name="tags/blender" />Blender</li>
+              <li><Icon name="tags/zbrush" />ZBrush</li>
+              <li><Icon name="devicon:maya" />Maya</li>
+            </ul>
+
             <h2 class="mb-3">Skills</h2>
             <ul class="list-none">
               <li>Front End Web Development</li>
@@ -113,13 +125,13 @@ const experience: experienceType[] = [
               <li>Digital Sculpting</li>
               <li>Retopology</li>
               <li>UV Layout</li>
-              <li>3D Printing</li>
-              <li>Vector Math</li>
+              <!-- <li>3D Printing</li> -->
+              <!-- <li>Vector Math</li> -->
             </ul>
           </div>
           <div>
-            <h2 class="mb-3">Tools</h2>
-            <ul class="list-none">
+            <h2 class="mb-3">Dev Tools</h2>
+            <ul class="mb-9 list-none">
               <li><Icon name="tags/threejs" />Three.js, R3F</li>
               <li><Icon name="devicon:react" />React</li>
               <li><Icon name="devicon:tailwindcss" />Tailwind</li>
@@ -138,22 +150,25 @@ const experience: experienceType[] = [
               <li><Icon name="devicon:chrome" />Chrome DevTools</li>
               <li><Icon name="devicon:nodejs" />Node.js</li>
               <li><Icon name="devicon:npm" />npm</li>
+              <li><Icon name="devicon:pnpm" />pnpm</li>
               <li><Icon name="devicon:git" />Git</li>
               <!-- <li><Icon name="skill-icons:gatsby" />Gatsby</li> -->
               <li><Icon name="vscode-icons:file-type-storybook" />Storybook</li>
               <li><Icon name="tags/svg-logo" />SVG</li>
-              <li><Icon name="skill-icons:illustrator" />Illustrator</li>
-              <li><Icon name="skill-icons:photoshop" />Photoshop</li>
-              <li><Icon name="skill-icons:premiere" />Premiere</li>
-              <li><Icon name="vscode-icons:file-type-affinity" />Affinity</li>
-              <li><Icon name="simple-icons:davinciresolve" />DaVinci Resolve</li>
-              <li><Icon name="devicon:maya" />Maya</li>
-              <li><Icon name="tags/zbrush" />ZBrush</li>
-              <li><Icon name="tags/blender" />Blender</li>
-              <!-- <li><Icon name="tags/resolume" />Resolume</li> -->
               <!-- <li><Icon name="skill-icons:docker" />Docker</li> -->
               <!-- <li><Icon name="devicon:redux" />Redux</li> -->
               <!-- <li><Icon name="skill-icons:aws-dark" />AWS</li> -->
+            </ul>
+
+            <h2 class="mb-3">Creative Tools</h2>
+            <ul class="list-none">
+              <li><Icon name="skill-icons:illustrator" />Illustrator</li>
+              <li><Icon name="skill-icons:photoshop" />Photoshop</li>
+              <li><Icon name="skill-icons:premiere" />Premiere</li>
+              <li><Icon name="devicon:figma" />Figma</li>
+              <li><Icon name="vscode-icons:file-type-affinity" />Affinity</li>
+              <li><Icon name="simple-icons:davinciresolve" />DaVinci Resolve</li>
+              <!-- <li><Icon name="tags/resolume" />Resolume</li> -->
             </ul>
           </div>
           <div class="col-span-2">
@@ -176,7 +191,10 @@ const experience: experienceType[] = [
               <div>
                 <div class="font-medium">
                   {url ? (
-                    <a href={url} target="_blank" rel="noreferrer">
+                    <a
+                      href={url}
+                      {...(url.startsWith('https') ? { target: '_blank', rel: 'noreferrer' } : {})}
+                    >
                       {company}
                     </a>
                   ) : (
