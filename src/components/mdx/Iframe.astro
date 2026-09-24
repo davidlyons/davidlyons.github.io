@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import type { HTMLAttributes } from 'astro/types';
+import ExternalLink from '../mdx/ExternalLink.astro';
 
 type Props = {
   aspect: 'square' | 'video' | 'auto' | 'retro';
@@ -17,17 +18,19 @@ const aspectVariants = {
 };
 ---
 
+<ExternalLink href={src} />
+
 <iframe
   src={src}
   title={title}
   allow="accelerometer; autoplay; clipboard-write; fullscreen; encrypted-media; gyroscope; picture-in-picture; web-share"
-  class={`mb-4 ${aspectVariants[aspect]} w-full border dark:border-white/10 overflow-hidden
+  class={`mb-11 ${aspectVariants[aspect]} w-full border dark:border-white/10 overflow-hidden
     rounded-lg`}
   {...props}
 >
 </iframe>
 
-<p class="mb-11">
+<!-- <p class="mb-11">
   <a
     href={src}
     target="_blank"
@@ -36,4 +39,4 @@ const aspectVariants = {
   >
     Open <Icon name="box-arrow-up-right" size={16} />
   </a>
-</p>
+</p> -->
