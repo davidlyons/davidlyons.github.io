@@ -19,6 +19,8 @@ projects.sort((a, b) => {
 
 <BaseLayout title={SITE_DESCRIPTION}>
   <div class="grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-    {projects.map((project) => <PortfolioPreview project={project} />)}
+    {projects.map((project) => (
+      <PortfolioPreview project={project} />
+    ))}
   </div>
 </BaseLayout>

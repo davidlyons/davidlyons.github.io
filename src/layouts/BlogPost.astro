@@ -12,18 +12,16 @@ const { title, description, pubDate, updatedDate, cover, coverAlt } = Astro.prop
 <BaseLayout title={title} description={description}>
   <div class="mx-auto max-w-5xl">
     <div class="hero-image">
-      {
-        cover && (
-          <Image
-            class="mb-4 aspect-2/1 w-full rounded-2xl object-cover"
-            width={1984}
-            height={992}
-            src={cover}
-            alt={coverAlt || ''}
-            quality={90}
-          />
-        )
-      }
+      {cover && (
+        <Image
+          class="mb-4 aspect-2/1 w-full rounded-2xl object-cover"
+          width={1984}
+          height={992}
+          src={cover}
+          alt={coverAlt || ''}
+          quality={90}
+        />
+      )}
     </div>
   </div>
   <div
@@ -40,13 +38,11 @@ const { title, description, pubDate, updatedDate, cover, coverAlt } = Astro.prop
         <div class="opacity-60">
           <FormattedDate date={pubDate} />
         </div>
-        {
-          updatedDate && (
-            <div class="text-sm opacity-40">
-              Last updated: <FormattedDate date={updatedDate} />
-            </div>
-          )
-        }
+        {updatedDate && (
+          <div class="text-sm opacity-40">
+            Last updated: <FormattedDate date={updatedDate} />
+          </div>
+        )}
       </div>
       <h1
         class="mb-11 border-b border-neutral-300 pb-8 text-5xl font-medium dark:border-neutral-700
