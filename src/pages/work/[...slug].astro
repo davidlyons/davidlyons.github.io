@@ -81,18 +81,19 @@ const nextEntry = projects[(currentIndex + 1) % projects.length];
         </p>
         {description && <p class="mb-12 text-pretty">{description}</p>}
 
-        <!-- badges -->
+        <!-- badges / icons -->
         <h2 class="mb-4 text-lg dark:text-white">Tools used</h2>
         <ul class="mb-6 flex list-none flex-wrap gap-2.5">
           {
             tags.map((tag) => (
               <li class="leading-none">
-                <span
+                {/* <span
                   class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium
                     dark:bg-gray-600 dark:text-white"
                 >
                   {iconMap[tag] && <Icon name={iconMap[tag]} size={16} class="me-2" />} {tag}
-                </span>
+                </span> */}
+                {iconMap[tag] && <Icon name={iconMap[tag]} size={24} title={tag} />}
               </li>
             ))
           }

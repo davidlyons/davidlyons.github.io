@@ -2,6 +2,7 @@ allowBuilds:
   esbuild: true
   sharp: true
 minimumReleaseAgeExclude:
-  - '@iconify-json/vscode-icons@1.2.50 || 1.2.60'
-  - astro@6.4.8
+  - '@iconify-json/vscode-icons@1.2.50 || 1.2.60 || 1.2.86'
+  - astro@6.4.8 || 7.3.7
   - prettier-plugin-classnames@0.10.3
+  - '@iconify-json/devicon@1.2.69'
