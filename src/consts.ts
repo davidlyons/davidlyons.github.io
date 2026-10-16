@@ -24,7 +24,7 @@ export const iconMap: iconMapType = {
   Photoshop: 'skill-icons:photoshop',
   'Radix UI': 'simple-icons:radixui',
   React: 'devicon:react',
-  'React Three Fiber': 'devicon:react',
+  'React Three Fiber': 'tags/r3f',
   SCSS: 'skill-icons:sass',
   Shadcn: 'vscode-icons:file-type-shadcn',
   SVG: 'tags/svg-logo',
