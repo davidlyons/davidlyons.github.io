@@ -32,6 +32,7 @@ export const iconMap: iconMapType = {
   Tailwind: 'devicon:tailwindcss',
   'Three.js': 'tags/threejs',
   'Tone.js': 'tags/tonejs',
+  'TanStack Query': 'simple-icons:tanstack',
   TypeScript: 'skill-icons:typescript',
   Vite: 'devicon:vitejs',
   ZBrush: 'tags/zbrush',
