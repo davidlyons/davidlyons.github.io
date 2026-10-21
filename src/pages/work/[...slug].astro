@@ -2,6 +2,7 @@
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import FormattedDate from '@/components/FormattedDate.astro';
+import ExternalLink from '@/components/mdx/ExternalLink.astro';
 import { components } from '@/components/mdx/index.astro';
 import { iconMap } from '@/consts';
 import { Icon } from 'astro-icon/components';
@@ -20,7 +21,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'work'>;
 
 const entry = Astro.props;
-const { title, description, pubDate, tags } = entry.data;
+const { title, description, url, pubDate, tags } = entry.data;
 const { Content } = await render(entry);
 
 // Get all entries in current category for prev/next arrow navigation
@@ -44,6 +45,7 @@ const nextEntry = projects[(currentIndex + 1) % projects.length];
 <BaseLayout {...entry.data}>
   <div class="grid-cols-12 lg:grid">
     <div class="col-span-3">
+      <!-- left side column -->
       <div class="sticky top-12">
         <!-- Previous / Next arrows -->
         {!entry.data.hide && (
@@ -74,10 +76,14 @@ const nextEntry = projects[(currentIndex + 1) % projects.length];
         )}
 
         <h1 class="mb-1 text-3xl dark:text-white">{title}</h1>
+
         <p class="opacity-60">
           <FormattedDate date={pubDate} />
         </p>
-        {description && <p class="mb-12 text-pretty">{description}</p>}
+
+        {description && <p class:list={['text-pretty', url ? 'mb-6' : 'mb-12']}>{description}</p>}
+
+        {url && <ExternalLink href={url} />}
 
         <!-- badges / icons -->
         <h2 class="mb-4 text-lg dark:text-white">Tools used</h2>
