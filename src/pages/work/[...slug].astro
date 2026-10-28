@@ -44,12 +44,12 @@ const nextEntry = projects[(currentIndex + 1) % projects.length];
 
 <BaseLayout {...entry.data}>
   <div class="grid-cols-12 lg:grid">
-    <div class="col-span-3">
+    <div class="col-span-3 text-center sm:text-start">
       <!-- left side column -->
       <div class="sticky top-12">
         <!-- Previous / Next arrows -->
         {!entry.data.hide && (
-          <div class="mb-7 flex items-center gap-2">
+          <div class="mb-7 flex items-center justify-between sm:justify-start gap-2">
             {prevEntry && (
               <a
                 href={`/work/${prevEntry.id}`}
@@ -77,7 +77,7 @@ const nextEntry = projects[(currentIndex + 1) % projects.length];
 
         <h1 class="mb-1 text-3xl dark:text-white">{title}</h1>
 
-        <p class="opacity-60">
+        <p class="opacity-60 max-sm:hidden">
           <FormattedDate date={pubDate} />
         </p>
 
@@ -86,20 +86,22 @@ const nextEntry = projects[(currentIndex + 1) % projects.length];
         {url && <ExternalLink href={url} />}
 
         <!-- badges / icons -->
-        <h2 class="mb-4 text-lg dark:text-white">Tools used</h2>
-        <ul class="mb-6 flex list-none flex-wrap gap-2.5">
-          {tags.map((tag) => (
-            <li class="leading-none">
-              {/* <span
-                  class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium
-                    dark:bg-gray-600 dark:text-white"
-                >
-                  {iconMap[tag] && <Icon name={iconMap[tag]} size={16} class="me-2" />} {tag}
-                </span> */}
-              {iconMap[tag] && <Icon name={iconMap[tag]} size={23} title={tag} />}
-            </li>
-          ))}
-        </ul>
+        <div class="max-sm:hidden">
+          <h2 class="mb-4 text-lg dark:text-white">Tools used</h2>
+          <ul class="mb-6 flex justify-center sm:justify-start list-none flex-wrap gap-2.5">
+            {tags.map((tag) => (
+              <li class="leading-none">
+                {/* <span
+                    class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium
+                      dark:bg-gray-600 dark:text-white"
+                  >
+                    {iconMap[tag] && <Icon name={iconMap[tag]} size={16} class="me-2" />} {tag}
+                  </span> */}
+                {iconMap[tag] && <Icon name={iconMap[tag]} size={23} title={tag} />}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
 

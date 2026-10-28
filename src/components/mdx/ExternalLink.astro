@@ -7,7 +7,7 @@ type Props = HTMLAttributes<'a'>;
 const { href, ...props } = Astro.props;
 ---
 
-<div class="mb-12 flex items-center">
+<div class="mb-8 sm:mb-12 flex items-center justify-center sm:justify-start">
   <Icon name="link" class="me-2 shrink-0" size={20} aria-hidden="true" />
   <span class="truncate">
     <a
